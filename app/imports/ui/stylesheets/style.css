@@ -1,3 +1,8 @@
 body {
+  background: #FAFAFA;
   padding-top: 61px;  /* Move body of page below navbar. */
+}
+.landing-page-splash {
+  background-image: url("/images/front-page-splash.jpeg");
+  height: 500px;
 }

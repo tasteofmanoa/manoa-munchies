@@ -29,6 +29,42 @@ FlowRouter.route('/stuff/:_id', {
   },
 });
 
+FlowRouter.route('/user-login', {
+  name: 'User_Login_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'User_Login_Page' });
+  },
+});
+
+FlowRouter.route('/admin-login', {
+  name: 'Admin_Login_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Admin_Login_Page' });
+  },
+});
+
+FlowRouter.route('/top-picks', {
+  name: 'Top_Picks_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Top_Picks_Page' });
+  },
+});
+
+FlowRouter.route('/your-feed', {
+  name: 'User_Feed_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'User_Feed_Page' });
+  },
+});
+
+FlowRouter.route('/user-settings', {
+  name: 'User_Settings_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'User_Settings_Page' });
+  },
+});
+
+
 FlowRouter.notFound = {
   action() {
     BlazeLayout.render('App_Body', { main: 'App_Not_Found' });
