@@ -1,0 +1,19 @@
+<template name="Header">
+  <div class="ui top fixed borderless menu" style="margin: 0px; border-radius: 0px; box-shadow: 0 0 0px">
+    <div class="ui container" style="color: #757575">
+      <a class="ui image item" href="{{pathFor 'Home_Page'}}">
+        <img class="ui tiny image" src="images/manoa-munchies-logo.png">
+      </a>
+      {{#if currentUser}}
+      <a class="{{ isActiveRoute 'Top_Picks_Page'}} item" href="{{ pathFor 'Top_Picks_Page' }}" style="color:#757575">Top Picks</a>
+      <a class="{{ isActiveRoute 'User_Feed_Page'}} item" href="{{ pathFor 'User_Feed_Page' }}" style="color:#757575">Your Feed</a>
+      <a href="#" class="right aligned item" style="color:#757575">{{> loginButtons align="right"}}</a>
+      {{else}}
+      <a class="{{ isActiveRoute 'User_Login_Page'}} right aligned item" href="{{ pathFor 'User_Login_Page' }}"><i class="user icon" style="color:#757575"></i>User Login</a>
+      <a class="{{ isActiveRoute 'Admin_Login_Page'}} item" href="{{ pathFor 'Admin_Login_Page' }}"><i class="privacy icon" style="color:#757575"></i>Admin Login</a>
+      <a href="#" class="item" style="color:#757575">{{> loginButtons align="right"}}</a>
+      {{/if}}
+
+    </div>
+  </div>
+</template>
