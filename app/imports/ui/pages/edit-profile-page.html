@@ -2,7 +2,15 @@
   <div class="ui grid container" style="margin-top: 25px">
     <div class="ui fluid container">
       <div class="ui two column grid container">
-        <div class="eight wide column" style="padding: 30px">
+        <div class="six wide column" style="padding-left: 40px; padding-top: 40px">
+          <div class="ui card">
+            <div class="image item">
+              <img class="fluid image item" src="/images/blank-profile-pic.original.jpg">
+              Click image to change profile picture
+            </div>
+          </div>
+        </div>
+        <div class="ten wide column" style="padding-right: 40px; padding-left: 20px; padding-top: 40px">
           <form class="ui form">
             <h4 class="ui dividing header">Profile Information</h4>
             <div class="field">
@@ -22,7 +30,7 @@
             </div>
             <div class="field">
               <label>Food Preferences</label>
-              <select multiple="" class="ui dropdown">
+              <select name="flavors" class="ui selection dropdown" multiple="" id="multi-select">
                 <option value="">Select Interests</option>
                 <option value="AF">Burgers</option>
                 <option value="AX">Tacos</option>
@@ -33,17 +41,36 @@
                 <option value="AO">Indian</option>
               </select>
             </div>
-            <button class="ui primary button">
+            <div class="ui sub header">Multiple</div>
+            <div class="ui fluid multiple search selection dropdown">
+              <input name="tags" type="hidden">
+              <i class="dropdown icon"></i>
+              <div class="default text">Skills</div>
+              <div class="menu">
+                <div class="item" data-value="angular">Angular</div>
+                <div class="item" data-value="css">CSS</div>
+                <div class="item" data-value="design">Graphic Design</div>
+                <div class="item" data-value="ember">Ember</div>
+                <div class="item" data-value="html">HTML</div>
+                <div class="item" data-value="ia">Information Architecture</div>
+                <div class="item" data-value="javascript">Javascript</div>
+                <div class="item" data-value="mech">Mechanical Engineering</div>
+                <div class="item" data-value="meteor">Meteor</div>
+                <div class="item" data-value="node">NodeJS</div>
+                <div class="item" data-value="plumbing">Plumbing</div>
+                <div class="item" data-value="python">Python</div>
+                <div class="item" data-value="rails">Rails</div>
+                <div class="item" data-value="react">React</div>
+                <div class="item" data-value="repair">Kitchen Repair</div>
+                <div class="item" data-value="ruby">Ruby</div>
+                <div class="item" data-value="ui">UI Design</div>
+                <div class="item" data-value="ux">User Experience</div>
+              </div>
+            </div>
+            <button class="ui primary button" style="margin-top: 20px">
               Save
             </button>
           </form>
-        </div>
-        <div class="eight wide column">
-          <div class="ui centered card">
-            <div class="image item">
-              <img class="fluid image item" src="/images/uahi-island-grill.jpg">
-            </div>
-          </div>
         </div>
       </div>
     </div>
