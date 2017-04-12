@@ -6,6 +6,9 @@ import './edit-stuff-page.js';
 
 import './home-page.html';
 
+import './edit-profile-page.html';
+import './edit-profile-page.js';
+
 import './admin-login-page.html';
 import './user-login-page.html';
 import './top-picks-page.html';

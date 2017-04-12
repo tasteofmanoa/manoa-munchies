@@ -7,6 +7,7 @@
       {{#if currentUser}}
       <a class="{{ isActiveRoute 'Top_Picks_Page'}} item" href="{{ pathFor 'Top_Picks_Page' }}" style="color:#757575">Top Picks</a>
       <a class="{{ isActiveRoute 'User_Feed_Page'}} item" href="{{ pathFor 'User_Feed_Page' }}" style="color:#757575">Your Feed</a>
+      <a class="{{ isActiveRoute 'Edit_Profile_Page'}} item" href="{{ pathFor 'Edit_Profile_Page' }}" style="color:#757575">Edit Profile</a>
       <a href="#" class="right aligned item" style="color:#757575">{{> loginButtons align="right"}}</a>
       {{else}}
       <a class="{{ isActiveRoute 'User_Login_Page'}} right aligned item" href="{{ pathFor 'User_Login_Page' }}"><i class="user icon" style="color:#757575"></i>User Login</a>

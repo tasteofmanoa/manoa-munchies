@@ -29,6 +29,13 @@ FlowRouter.route('/stuff/:_id', {
   },
 });
 
+FlowRouter.route('/edit-profile', {
+  name: 'Edit_Profile_Page',
+  action() {
+    BlazeLayout.render('App_Body', { main: 'Edit_Profile_Page' });
+  },
+});
+
 FlowRouter.route('/user-login', {
   name: 'User_Login_Page',
   action() {

@@ -1,0 +1,51 @@
+<template name="Edit_Profile_Page">
+  <div class="ui grid container" style="margin-top: 25px">
+    <div class="ui fluid container">
+      <div class="ui two column grid container">
+        <div class="eight wide column" style="padding: 30px">
+          <form class="ui form">
+            <h4 class="ui dividing header">Profile Information</h4>
+            <div class="field">
+              <label>Name</label>
+              <div class="two fields">
+                <div class="field">
+                  <input type="text" name="profile[first-name]" placeholder="First Name">
+                </div>
+                <div class="field">
+                  <input type="text" name="profile[last-name]" placeholder="Last Name">
+                </div>
+              </div>
+            </div>
+            <div class="field">
+              <label>Short Bio</label>
+              <textarea rows="4"></textarea>
+            </div>
+            <div class="field">
+              <label>Food Preferences</label>
+              <select multiple="" class="ui dropdown">
+                <option value="">Select Interests</option>
+                <option value="AF">Burgers</option>
+                <option value="AX">Tacos</option>
+                <option value="DZ">Poke</option>
+                <option value="AS">Chicken</option>
+                <option value="AD">Spicy</option>
+                <option value="AL">Hawaiian</option>
+                <option value="AO">Indian</option>
+              </select>
+            </div>
+            <button class="ui primary button">
+              Save
+            </button>
+          </form>
+        </div>
+        <div class="eight wide column">
+          <div class="ui centered card">
+            <div class="image item">
+              <img class="fluid image item" src="/images/uahi-island-grill.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
