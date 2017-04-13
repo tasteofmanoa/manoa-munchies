@@ -70,6 +70,22 @@ userRoutes.route('/filter', {
   },
 });
 
+export const homePageRouteName = 'User_Home_Page';
+userRoutes.route('/home', {
+  name: homePageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: homePageRouteName });
+  },
+});
+
+export const feedPageRouteName = 'User_Feed_Page';
+userRoutes.route('/search', {
+  name: feedPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: feedPageRouteName });
+  },
+});
+
 /*                        MISC ROUTES                       */
 FlowRouter.notFound = {
   action() {
