@@ -1,72 +1,76 @@
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { BlazeLayout } from 'meteor/kadira:blaze-layout';
+import { $ } from 'meteor/jquery';
 
+
+/*                        LANDING ROUTE                       */
+
+export const landingPageRouteName = 'Landing_Page';
 FlowRouter.route('/', {
-  name: 'Home_Page',
+  name: landingPageRouteName,
   action() {
-    BlazeLayout.render('App_Body', { main: 'Home_Page' });
+    BlazeLayout.render('Landing_Layout', { main: landingPageRouteName });
   },
 });
 
-FlowRouter.route('/list', {
-  name: 'List_Stuff_Page',
-  action() {
-    BlazeLayout.render('App_Body', { main: 'List_Stuff_Page' });
-  },
-});
+/*                        DIRECTORY ROUTE                       */
 
-FlowRouter.route('/add', {
-  name: 'Add_Stuff_Page',
-  action() {
-    BlazeLayout.render('App_Body', { main: 'Add_Stuff_Page' });
-  },
-});
+function addDirectoryBodyClass() {
+  $('body').addClass('directory-page-body');
+}
 
-FlowRouter.route('/stuff/:_id', {
-  name: 'Edit_Stuff_Page',
-  action() {
-    BlazeLayout.render('App_Body', { main: 'Edit_Stuff_Page' });
-  },
-});
+function removeDirectoryBodyClass() {
+  $('body').removeClass('directory-page-body');
+}
 
-FlowRouter.route('/user-login', {
-  name: 'User_Login_Page',
+export const directoryPageRouteName = 'Directory_Page';
+FlowRouter.route('/directory', {
+  name: directoryPageRouteName,
   action() {
-    BlazeLayout.render('App_Body', { main: 'User_Login_Page' });
+    BlazeLayout.render('Directory_Layout', { main: directoryPageRouteName });
   },
-});
-
-FlowRouter.route('/admin-login', {
-  name: 'Admin_Login_Page',
-  action() {
-    BlazeLayout.render('App_Body', { main: 'Admin_Login_Page' });
-  },
-});
-
-FlowRouter.route('/top-picks', {
-  name: 'Top_Picks_Page',
-  action() {
-    BlazeLayout.render('App_Body', { main: 'Top_Picks_Page' });
-  },
-});
-
-FlowRouter.route('/your-feed', {
-  name: 'User_Feed_Page',
-  action() {
-    BlazeLayout.render('App_Body', { main: 'User_Feed_Page' });
-  },
-});
-
-FlowRouter.route('/user-settings', {
-  name: 'User_Settings_Page',
-  action() {
-    BlazeLayout.render('App_Body', { main: 'User_Settings_Page' });
-  },
+  triggersEnter: [addDirectoryBodyClass],
+  triggersExit: [removeDirectoryBodyClass],
 });
 
 
+/*                        USER ROUTES                      */
+
+
+function addUserBodyClass() {
+  $('body').addClass('user-layout-body');
+}
+
+function removeUserBodyClass() {
+  $('body').removeClass('user-layout-body');
+}
+
+const userRoutes = FlowRouter.group({
+  prefix: '/:username',
+  name: 'userRoutes',
+  triggersEnter: [addUserBodyClass],
+  triggersExit: [removeUserBodyClass],
+});
+
+export const profilePageRouteName = 'Profile_Page';
+userRoutes.route('/profile', {
+  name: profilePageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: profilePageRouteName });
+  },
+});
+
+export const filterPageRouteName = 'Filter_Page';
+userRoutes.route('/filter', {
+  name: filterPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: filterPageRouteName });
+  },
+});
+
+/*                        MISC ROUTES                       */
 FlowRouter.notFound = {
   action() {
-    BlazeLayout.render('App_Body', { main: 'App_Not_Found' });
+    BlazeLayout.render('Page_Not_Found');
   },
 };
