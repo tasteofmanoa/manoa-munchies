@@ -94,7 +94,7 @@
             "Sushi"
           ],
           "title": "",
-          "picture": "/images/default-image.png"
+          "picture": "/images/pizza-icon.png"
         },
         {
           "firstName": "Rick",
@@ -105,7 +105,7 @@
             "Sushi"
           ],
           "title": "",
-          "picture": "/images/default-image.png"
+          "picture": "/images/pizza-icon.png"
         },
         {
           "firstName": "Anakin",
@@ -116,7 +116,7 @@
             "Sushi"
           ],
           "title": "",
-          "picture": "/images/default-image.png"
+          "picture": "/images/pizza-icon.png"
         },
         {
           "firstName": "troll",
@@ -127,7 +127,7 @@
             "Sushi"
           ],
           "title": "",
-          "picture": "/images/default-image.png"
+          "picture": "/images/pizza-icon.png"
         },
         {
           "firstName": "Lara",
@@ -138,7 +138,7 @@
             "Sushi"
           ],
           "title": "",
-          "picture": "/images/default-image.png"
+          "picture": "/images/pizza-icon.png"
         }
       ]
     }
