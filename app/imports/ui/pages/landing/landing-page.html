@@ -1,63 +1,83 @@
 <template name="Landing_Page">
 
-  <div class="landing-section-1">
-    <div class="ui grid">
-
+  <div class="ui landing-page-splash centered middle aligned "
+       style="background-image:url('/images/front-page-splash.jpeg'); height: 650px;">
+    <div class="ui grid" style="padding: 20px">
       <div class="row">
         <div class="ui right aligned sixteen wide column">
-          {{> Cas_Login }}
-        </div>
-
-      </div>
-      <div class="row">
-        <div class="ui center aligned sixteen wide column">
-          <h1 class="landing-section-1-welcome">Welcome to BowFolios</h1>
-          <h3 class="landing-section-1-tagline">Professional portfolios and networking for the University of Hawaii community</h3>
+          {{> Cas_Login size='large'}}
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="landing-section-2">
-    <div class="ui grid">
-      <div class="ui eight wide column">
-        <img class="ui centered medium image" src="/images/profile.png">
+    <div class="ui one row two column centered middle aligned grid container">
+      <div class="ui middle aligned column">
+        <div class="ui middle aligned list">
+          <div class="ui image item">
+            <div class="ui hidden divider"></div>
+            <div class="ui hidden divider"></div>
+            <img class="ui large image" src="/images/white-mm-logo.png">
+          </div>
+        </div>
       </div>
-      <div class="ui eight wide middle aligned column">
-        <h1 class="landing-section-header">Create your portfolio.</h1>
-        <h1 class="landing-section-header">Specify your interests.</h1>
-      </div>
-    </div>
-  </div>
-
-  <div class="landing-section-3">
-    <div class="ui grid">
-      <div class="ui eight wide middle aligned column">
-        <h1 class="landing-section-header">Publish your portfolio in the BowFolio directory.</h1>
-      </div>
-      <div class="ui eight wide column">
-        <img class="ui centered medium image" src="/images/directory.png">
+      <div class="ui middle aligned column" style="color: white; font-size: 30px;">
+        <div class="ui hidden divider"></div>
+        <div class="ui hidden divider"></div>
+        <div class="text item">Less looking more munching.</div>
+        <div class="ui hidden divider"></div>
+        <div class="text item">Get your food faster using our app.</div>
+        <div class="ui hidden divider"></div>
+        <button class="ui huge button" style="color: white; background-color: #F4511E;">Start Munching!</button>
       </div>
     </div>
   </div>
 
-  <div class="landing-section-2">
-    <div class="ui grid">
-      <div class="ui eight wide column">
-        <img class="ui centered medium image" src="/images/filter.png">
-      </div>
-      <div class="ui eight wide middle aligned column">
-        <h1 class="landing-section-header">Find UH community members with similar interests.</h1>
+  <div class="ui first-info-landing container"
+       style="margin-top: 75px; margin-bottom: 75x; color: #757575; font-size: 18px; background: white; height: 450px; padding: 50px">
+    <div class="ui one row two column grid container">
+      <div class="ui middle aligned row">
+        <div class="ui six wide centered column">
+          <img class="ui circular centered big image item" src="images/search.png">
+        </div>
+        <div class="ui ten wide column">
+          <h1>Craving a certain food item?</h1>
+          <h1>Find all available for that day based on tags.</h1>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="landing-section-5">
-    <div class="ui grid">
-      <div class="ui center aligned sixteen wide column">
-        {{> Cas_Login size="large"}}
+  <div class="ui second-info-landing container"
+       style="margin-top: 75px; margin-bottom: 75x; color: #757575; font-size: 18px; background: white; height: 450px; padding: 50px">
+    <div class="ui one row two column grid container">
+      <div class="ui middle aligned row">
+        <div class="ui six wide centered column">
+          <img class="ui circular centered big image item" src="images/favorite-for-later.png">
+        </div>
+        <div class="ui ten wide column">
+          <h1>Save your favorite food items for later and know when they are available and if the vendor is open on that
+            day. </h1>
+        </div>
       </div>
     </div>
   </div>
+
+  <div class="ui third-info-landing container"
+       style="margin-top: 75px; margin-bottom: 75x; color: #757575; font-size: 18px; background: white; height: 450px; padding: 50px">
+    <div class="ui one row two column grid container">
+      <div class="ui middle aligned row">
+        <div class="ui six wide centered column">
+          <img class="ui circular centered big image item" src="images/compare-food.png">
+        </div>
+        <div class="ui ten wide column">
+          <h1>Compare your favorite food items with your friends to help decide where you should go to eat during any
+            time of the day.</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui hidden divider"></div>
+  <div class="ui hidden divider"></div>
+  <div class="ui hidden divider"></div>
+  <div class="ui hidden divider"></div>
 
 </template>

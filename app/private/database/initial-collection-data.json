@@ -1,83 +1,83 @@
 {
-  "comment": "Initial contents for the BowFolios database. For development purposes only.",
+  "comment": "Initial contents for the ManoaMunchies database. For development purposes only.",
   "collections": [
     {
       "name": "InterestCollection",
       "contents": [
         {
-          "name": "Software Engineering",
-          "description": "Techniques for development of high quality systems"
-        },
-        {
-          "name": "Algorithms",
-          "description": "A set of rules to be followed in computation"
-        },
-        {
-          "name": "Mobile Networks",
-          "description": "Networks created using mobile devices."
-        },
-        {
-          "name": "Sailing",
+          "name": "Vegan",
           "description": ""
         },
         {
-          "name": "Mars",
+          "name": "Vegetarian",
           "description": ""
         },
         {
-          "name": "Imu Cooking",
+          "name": "Seafood",
+          "description": ""
+        },
+        {
+          "name": "Chinese",
+          "description": ""
+        },
+        {
+          "name": "Vietnamese",
+          "description": ""
+        },
+        {
+          "name": "American-fusion",
           "description": "Hawaiian practice of cooking in a pit."
         },
         {
-          "name": "Scuba",
+          "name": "Spicy",
           "description": ""
         },
         {
-          "name": "Photography",
+          "name": "Frozen",
           "description": ""
         },
         {
-          "name": "Wind surfing",
+          "name": "Organic",
           "description": ""
         },
         {
-          "name": "Psychology",
+          "name": "Comfort Food",
           "description": ""
         },
         {
-          "name": "Motorcycling",
+          "name": "Junk Food",
           "description": ""
         },
         {
-          "name": "Accreditation",
+          "name": "Fast food",
           "description": ""
         },
         {
-          "name": "Paddling",
+          "name": "Mexican",
           "description": ""
         },
         {
-          "name": "Crossfit",
+          "name": "Stir-fry",
           "description": ""
         },
         {
-          "name": "Cybersecurity",
+          "name": "Pizza",
           "description": ""
         },
         {
-          "name": "Surfing",
+          "name": "Burger",
           "description": ""
         },
         {
-          "name": "Computer Vision",
+          "name": "Coffee",
           "description": ""
         },
         {
-          "name": "Martial Arts",
+          "name": "Smoothies",
           "description": ""
         },
         {
-          "name": "Evolutionary Computation",
+          "name": "Sushi",
           "description": ""
         }
       ]
@@ -86,63 +86,59 @@
       "name": "ProfileCollection",
       "contents": [
         {
-          "firstName": "Lee",
-          "lastName": "Altenberg",
-          "username": "altenber",
-          "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
+          "firstName": "John",
+          "lastName": "Doe",
+          "username": "jdoe",
+          "bio": "I'm just trying to find myself through food.",
           "interests": [
-            "Evolutionary Computation"
+            "Sushi"
           ],
-          "title": "Associate Professor, Information and Computer Sciences",
-          "picture": "/images/altenberg.jpg"
+          "title": "",
+          "picture": "/images/default-image.png"
         },
         {
-          "firstName": "Kyungim",
-          "lastName": "Baek",
-          "username": "baek",
-          "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
+          "firstName": "Rick",
+          "lastName": "Sanchez",
+          "username": "rsanchez",
+          "bio": "Wub-a-lub-a-dub-dub",
           "interests": [
-            "Computer Vision"
+            "Sushi"
           ],
-          "title": "Associate Professor, Information and Computer Sciences",
-          "picture": "/images/baek.jpg"
+          "title": "",
+          "picture": "/images/default-image.png"
         },
         {
-          "firstName": "Edo",
-          "lastName": "Biagioni",
-          "username": "esb",
-          "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
+          "firstName": "Anakin",
+          "lastName": "Skywalker",
+          "username": "askywalker",
+          "bio": "I'm just going through some troubling times right now.",
           "interests": [
-            "Mobile Networks",
-            "Sailing"
+            "Sushi"
           ],
-          "title": "Associate Professor, Information and Computer Sciences",
-          "picture": "/images/biagioni.jpg"
+          "title": "",
+          "picture": "/images/default-image.png"
         },
         {
-          "firstName": "Kim",
-          "lastName": "Binsted",
-          "username": "binsted",
-          "bio": "I am an Associate Professor of Information and Computer Sciences at the University of Hawaii.",
+          "firstName": "troll",
+          "lastName": "acc",
+          "username": "420blzit",
+          "bio": "I'm just hungry all the time.",
           "interests": [
-            "Mars",
-            "Imu Cooking"
+            "Sushi"
           ],
-          "title": "Associate Professor, Information and Computer Sciences",
-          "picture": "/images/binsted.jpg"
+          "title": "",
+          "picture": "/images/default-image.png"
         },
         {
-          "firstName": "Henri",
-          "lastName": "Casanova",
-          "username": "henric",
-          "github": "henricasanova",
-          "bio": "I am a Professor of Information and Computer Sciences at the University of Hawaii.",
+          "firstName": "Lara",
+          "lastName": "Croft",
+          "username": "lcroft",
+          "bio": "I raid Tombs and stuff.",
           "interests": [
-            "Surfing",
-            "Photography"
+            "Sushi"
           ],
-          "title": "Professor, Information and Computer Sciences",
-          "picture": "/images/casanova.jpg"
+          "title": "",
+          "picture": "/images/default-image.png"
         }
       ]
     }

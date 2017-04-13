@@ -1,10 +1,19 @@
 <template name="User_Header">
-  <div class="ui top fixed borderless inverted teal menu">
+  <div class="ui top fixed borderless white menu" style="margin-bottom: 100px">
     <div class="ui container">
-      <div class="item"><h1>BowFolios</h1></div>
-      <a class="{{isActiveRoute "Profile_Page"}} item" href="{{pathFor "Profile_Page" username=routeUserName}}">Profile</a>
-      <a class="{{isActiveRoute "Filter_Page"}} item" href="{{pathFor "Filter_Page" username=routeUserName}}">Filter</a>
-      <div class="right aligned item">{{> Cas_Login }}</div>
+      <a class="ui image item" href="{{pathFor "Profile_Page" username=routeUserName}}">
+        <img class="ui tiny image" src="images/manoa-munchies-logo.png">
+      </a>
+      <div class="ui search item">
+        <div class="ui icon input">
+          <i class="search icon"></i>
+          <input class="prompt" type="text" placeholder="What are you craving?">
+        </div>
+        <div class="results"></div>
+      </div>
+      <a class="{{isActiveRoute "Profile_Page"}} right aligned item" href="{{pathFor "Profile_Page" username=routeUserName}}">Profile</a>
+      <a class="{{isActiveRoute "Filter_Page"}} item" href="{{pathFor "Filter_Page" username=routeUserName}}">Find Friends</a>
+      <div class="item">{{> Cas_Login }}</div>
     </div>
   </div>
 </template>
