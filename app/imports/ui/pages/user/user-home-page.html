@@ -1,2 +1,236 @@
 <template name="User_Home_Page">
+  {{#if Template.subscriptionsReady}}
+  <div class="ui landing-page-splash centered middle aligned "
+       style="background-image:url('/images/front-page-splash.jpeg'); height: 500px;">
+    <div class="ui two row one column centered middle aligned grid container">
+      <div class="row">
+        <div class="ui middle aligned column">
+          <div class="ui image item">
+            <img class="ui large image" src="/images/white-mm-logo.png">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="ui big search item">
+          <div class="ui icon input">
+            <input class="prompt" type="text" placeholder="What are you craving?                 ">
+          </div>
+          <a class="ui button item" href="{{pathFor " User_Feed_Page" username=routeUserName}}" style="padding-left:
+          5px; padding-right: 5px; background: none;">
+          <button class="ui circular blue icon big button">
+            <i class="search icon"></i>
+          </button>
+          </a>
+          <div class="results"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="top-picks" style="margin-top: 25px">
+  <div class="ui one row grid container" style="margin-bottom: 5px;">
+    <div class="row">
+      <div class="ui horizontal divider header" style="color: #757575">Top picks of the day</div>
+    </div>
+  </div>
+  <div class="ui centered three column row relaxed grid container">
+    <div class="ui column">
+      <div class="ui card">
+        <div class="image item">
+          <img class="fluid image item" src="/images/uahi-island-grill.jpg">
+        </div>
+        <div class="content">
+          <div class="ui list">
+            <div class="header item" style="font-weight: bold; font-size: 16px">Furikake Chicken Salad</div>
+            <div class="text item">Find it at Uahi Island Grill!</div>
+            <div class="text item">Monday-Friday</div>
+            <div class="text item">10:00am-2:00pm</div>
+            <div class="text item">Kennedy Theatre</div>
+          </div>
+        </div>
+        <div class="content">
+    <span class="right floated">
+      <i class="heart outline like icon"></i>
+      42 likes
+    </span>
+          <i class="comment icon"></i>
+          42 comments
+        </div>
+        <div class="extra content">
+          <div class="ui large transparent left icon input">
+            <i class="heart outline icon"></i>
+            <input type="text" placeholder="Add Comment...">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ui column">
+      <div class="ui card">
+        <div class="image item">
+          <img class="fluid image item" src="/images/crepe-cafe.jpg">
+        </div>
+        <div class="content">
+          <div class="ui list">
+            <div class="header item" style="font-weight: bold; font-size: 16px">Nutella and Banana Breakfast Crepe
+            </div>
+            <div class="text item">Find it at Le Crepe Cafe!</div>
+            <div class="text item">Monday-Friday</div>
+            <div class="text item">8:00am-2:00pm</div>
+            <div class="text item">UH Law Library</div>
+          </div>
+        </div>
+        <div class="content">
+    <span class="right floated">
+      <i class="heart outline like icon"></i>
+      42 likes
+    </span>
+          <i class="comment icon"></i>
+          42 comments
+        </div>
+        <div class="extra content">
+          <div class="ui large transparent left icon input">
+            <i class="heart outline icon"></i>
+            <input type="text" placeholder="Add Comment...">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ui column">
+      <div class="ui card">
+        <div class="image item">
+          <img class="fluid image item" src="/images/da-spot-smoothie.jpg">
+        </div>
+        <div class="content">
+          <div class="ui list">
+            <div class="header item" style="font-weight: bold; font-size: 16px">Aloha Berry Smoothie</div>
+            <div class="text item">Find it at Da Spot!</div>
+            <div class="text item">Monday-Friday</div>
+            <div class="text item">10:00am-2:00pm</div>
+            <div class="text item">Sustainability Courtyard</div>
+          </div>
+        </div>
+        <div class="content">
+    <span class="right floated">
+      <i class="heart outline like icon"></i>
+      42 likes
+    </span>
+          <i class="comment icon"></i>
+          42 comments
+        </div>
+        <div class="extra content">
+          <div class="ui large transparent left icon input">
+            <i class="heart outline icon"></i>
+            <input type="text" placeholder="Add Comment...">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div class="top-picks" style="margin-top: 25px">
+    <div class="ui one row grid container" style="margin-bottom: 5px;">
+      <div class="row">
+        <div class="ui horizontal divider header" style="color: #757575">Favorites Available Now</div>
+      </div>
+    </div>
+    <div class="ui centered three column row relaxed grid container">
+      <div class="ui column">
+        <div class="ui card">
+          <div class="image item">
+            <img class="fluid image item" src="/images/uahi-island-grill.jpg">
+          </div>
+          <div class="content">
+            <div class="ui list">
+              <div class="header item" style="font-weight: bold; font-size: 16px">Furikake Chicken Salad</div>
+              <div class="text item">Find it at Uahi Island Grill!</div>
+              <div class="text item">Monday-Friday</div>
+              <div class="text item">10:00am-2:00pm</div>
+              <div class="text item">Kennedy Theatre</div>
+            </div>
+          </div>
+          <div class="content">
+    <span class="right floated">
+      <i class="heart outline like icon"></i>
+      42 likes
+    </span>
+            <i class="comment icon"></i>
+            42 comments
+          </div>
+          <div class="extra content">
+            <div class="ui large transparent left icon input">
+              <i class="heart outline icon"></i>
+              <input type="text" placeholder="Add Comment...">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ui column">
+        <div class="ui card">
+          <div class="image item">
+            <img class="fluid image item" src="/images/crepe-cafe.jpg">
+          </div>
+          <div class="content">
+            <div class="ui list">
+              <div class="header item" style="font-weight: bold; font-size: 16px">Nutella and Banana Breakfast Crepe
+              </div>
+              <div class="text item">Find it at Le Crepe Cafe!</div>
+              <div class="text item">Monday-Friday</div>
+              <div class="text item">8:00am-2:00pm</div>
+              <div class="text item">UH Law Library</div>
+            </div>
+          </div>
+          <div class="content">
+    <span class="right floated">
+      <i class="heart outline like icon"></i>
+      42 likes
+    </span>
+            <i class="comment icon"></i>
+            42 comments
+          </div>
+          <div class="extra content">
+            <div class="ui large transparent left icon input">
+              <i class="heart outline icon"></i>
+              <input type="text" placeholder="Add Comment...">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ui column">
+        <div class="ui card">
+          <div class="image item">
+            <img class="fluid image item" src="/images/da-spot-smoothie.jpg">
+          </div>
+          <div class="content">
+            <div class="ui list">
+              <div class="header item" style="font-weight: bold; font-size: 16px">Aloha Berry Smoothie</div>
+              <div class="text item">Find it at Da Spot!</div>
+              <div class="text item">Monday-Friday</div>
+              <div class="text item">10:00am-2:00pm</div>
+              <div class="text item">Sustainability Courtyard</div>
+            </div>
+          </div>
+          <div class="content">
+    <span class="right floated">
+      <i class="heart outline like icon"></i>
+      42 likes
+    </span>
+            <i class="comment icon"></i>
+            42 comments
+          </div>
+          <div class="extra content">
+            <div class="ui large transparent left icon input">
+              <i class="heart outline icon"></i>
+              <input type="text" placeholder="Add Comment...">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  {{/if}}
 </template>

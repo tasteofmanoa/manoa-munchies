@@ -1,14 +1,14 @@
 <template name="User_Header">
   <div class="ui top fixed borderless white menu" style="margin-bottom: 200px">
     <div class="ui container">
-      <a class="ui image item" href="{{pathFor "Profile_Page" username=routeUserName}}">
+      <a class="ui image item" href="{{pathFor "User_Home_Page" username=routeUserName}}">
       <img class="ui tiny image" src="/images/manoa-munchies-logo.png">
       </a>
       <div class="ui large search item">
         <div class="ui icon input">
           <input class="prompt" type="text" placeholder="What are you craving?">
         </div>
-        <a class="ui button item" href="{{pathFor "Profile_Page" username=routeUserName}}" style="padding-left: 5px; padding-right: 5px;">
+        <a class="ui button item" href="{{pathFor "User_Feed_Page" username=routeUserName}}" style="padding-left: 5px; padding-right: 5px;">
         <button class="ui circular blue icon tiny button">
           <i class="search icon"></i>
         </button>
