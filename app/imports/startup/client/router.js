@@ -60,6 +60,13 @@ userRoutes.route('/profile', {
   },
 });
 
+export const userProfilePageRouteName = 'User_Profile_Page';
+userRoutes.route('/user-profile', {
+  name: userProfilePageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: userProfilePageRouteName });
+  },
+});
 
 
 export const filterPageRouteName = 'Filter_Page';
