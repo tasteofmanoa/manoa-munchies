@@ -77,6 +77,14 @@ userRoutes.route('/filter', {
   },
 });
 
+export const vendorPageRouteName = 'Vendor_Profile_Page';
+userRoutes.route('/vendor', {
+  name: vendorPageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: vendorPageRouteName });
+  },
+});
+
 export const homePageRouteName = 'User_Home_Page';
 userRoutes.route('/home', {
   name: homePageRouteName,
