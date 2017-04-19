@@ -2,8 +2,12 @@
   "comment": "Initial contents for the ManoaMunchies database. For development purposes only.",
   "collections": [
     {
-      "name": "InterestCollection",
+      "name": "TastesCollection",
       "contents": [
+        {
+          "name": "Burger",
+          "description": ""
+        },
         {
           "name": "Vegan",
           "description": ""
@@ -65,10 +69,6 @@
           "description": ""
         },
         {
-          "name": "Burger",
-          "description": ""
-        },
-        {
           "name": "Coffee",
           "description": ""
         },
@@ -90,7 +90,7 @@
           "lastName": "Doe",
           "username": "jdoe",
           "bio": "I'm just trying to find myself through food.",
-          "interests": [
+          "tastes": [
             "Sushi"
           ],
           "title": "",
@@ -101,7 +101,7 @@
           "lastName": "Sanchez",
           "username": "rsanchez",
           "bio": "Wub-a-lub-a-dub-dub",
-          "interests": [
+          "tastes": [
             "Sushi"
           ],
           "title": "",
@@ -112,7 +112,7 @@
           "lastName": "Skywalker",
           "username": "askywalker",
           "bio": "I'm just going through some troubling times right now.",
-          "interests": [
+          "tastes": [
             "Sushi"
           ],
           "title": "",
@@ -123,7 +123,7 @@
           "lastName": "acc",
           "username": "420blzit",
           "bio": "I'm just hungry all the time.",
-          "interests": [
+          "tastes": [
             "Sushi"
           ],
           "title": "",
@@ -134,7 +134,7 @@
           "lastName": "Croft",
           "username": "lcroft",
           "bio": "I raid Tombs and stuff.",
-          "interests": [
+          "tastes": [
             "Sushi"
           ],
           "title": "",

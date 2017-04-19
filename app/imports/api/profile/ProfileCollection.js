@@ -1,6 +1,6 @@
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 import BaseCollection from '/imports/api/base/BaseCollection';
-import { Interests } from '/imports/api/interest/InterestCollection';
+import { Tastes } from '/imports/api/taste/TasteCollection';
 import { check } from 'meteor/check';
 import { Meteor } from 'meteor/meteor';
 
@@ -22,7 +22,7 @@ class ProfileCollection extends BaseCollection {
       firstName: { type: String, optional: true },
       lastName: { type: String, optional: true },
       bio: { type: String, optional: true },
-      interests: { type: [String], optional: true },
+      tastes: { type: [String], optional: true },
       title: { type: String, optional: true },
       picture: { type: SimpleSchema.RegEx.Url, optional: true },
       github: { type: SimpleSchema.RegEx.Url, optional: true },
@@ -38,7 +38,7 @@ class ProfileCollection extends BaseCollection {
    *                   lastName: 'Johnson',
    *                   username: 'johnson',
    *                   bio: 'I have been a professor of computer science at UH since 1990.',
-   *                   interests: ['Application Development', 'Software Engineering', 'Databases'],
+   *                   tastes: ['Application Development', 'Software Engineering', 'Databases'],
    *                   title: 'Professor of Information and Computer Sciences',
    *                   picture: 'http://philipmjohnson.org/headshot.jpg',
    *                   github: 'https://github.com/philipmjohnson',
@@ -47,12 +47,12 @@ class ProfileCollection extends BaseCollection {
    * @param { Object } description Object with required key username.
    * Remaining keys are optional.
    * Username must be unique for all users. It should be the UH email account.
-   * Interests is an array of defined interest names.
+   * Tastes is an array of defined tastes names.
    * @throws { Meteor.Error } If a user with the supplied username already exists, or
-   * if one or more interests are not defined, or if github, facebook, and instagram are not URLs.
+   * if one or more tastes are not defined, or if github, facebook, and instagram are not URLs.
    * @returns The newly created docID.
    */
-  define({ firstName = '', lastName = '', username, bio = '', interests, picture = '', title = '', github = '',
+  define({ firstName = '', lastName = '', username, bio = '', tastes, picture = '', title = '', github = '',
       facebook = '', instagram = '' }) {
     // make sure required fields are OK.
     const checkPattern = { firstName: String, lastName: String, username: String, bio: String, picture: String,
@@ -63,9 +63,9 @@ class ProfileCollection extends BaseCollection {
       throw new Meteor.Error(`${username} is previously defined in another Profile`);
     }
 
-    // Throw an error if any of the passed Interest names are not defined.
-    Interests.assertNames(interests);
-    return this._collection.insert({ firstName, lastName, username, bio, interests, picture, title, github,
+    // Throw an error if any of the passed Taste names are not defined.
+    Tastes.assertNames(tastes);
+    return this._collection.insert({ firstName, lastName, username, bio, tastes, picture, title, github,
       facebook, instagram });
   }
 
@@ -80,13 +80,13 @@ class ProfileCollection extends BaseCollection {
     const lastName = doc.lastName;
     const username = doc.username;
     const bio = doc.bio;
-    const interests = doc.interests;
+    const tastes = doc.tastes;
     const picture = doc.picture;
     const title = doc.title;
     const github = doc.github;
     const facebook = doc.facebook;
     const instagram = doc.instagram;
-    return { firstName, lastName, username, bio, interests, picture, title, github, facebook, instagram };
+    return { firstName, lastName, username, bio, tastes, picture, title, github, facebook, instagram };
   }
 }
 
