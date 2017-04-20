@@ -5,8 +5,68 @@
       "name": "TasteCollection",
       "contents": [
         {
+          "name": "American-fusion",
+          "description": "Hawaiian practice of cooking in a pit."
+        },
+        {
           "name": "Burger",
           "description": "Tasty Beef stuffed between two buns"
+        },
+        {
+          "name": "Chinese",
+          "description": "Dim-sum, Won-ton, and that tasty tasty MSG"
+        },
+        {
+          "name": "Coffee",
+          "description": "Don't Stop can't stop keep it going"
+        },
+        {
+          "name": "Comfort Food",
+          "description": "Long Day? Feel Good."
+        },
+        {
+          "name": "Fast food",
+          "description": "Long Day? Save time."
+        },
+        {
+          "name": "Frozen",
+          "description": "Let it go"
+        },
+        {
+          "name": "Junk Food",
+          "description": "Long Day? Feels Bad."
+        },
+        {
+          "name": "Mexican",
+          "description": "Burrito, Tachito, Chimichonga, Tequilla. Ariba!"
+        },
+        {
+          "name": "Organic",
+          "description": "The all natural approach, no added anything"
+        },
+        {
+          "name": "Pizza",
+          "description": "Toppings on sauce on bread"
+        },
+        {
+          "name": "Seafood",
+          "description": "Found in the ocean"
+        },
+        {
+          "name": "Smoothies",
+          "description": "Cool, refreshing, fruity and tasty frozen drinks"
+        },
+        {
+          "name": "Spicy",
+          "description": "Too hot for me"
+        },
+        {
+          "name": "Stir-fry",
+          "description": ""
+        },
+        {
+          "name": "Sushi",
+          "description": "Raw and on the rice"
         },
         {
           "name": "Vegan",
@@ -17,68 +77,8 @@
           "description": "Green, clean with the exception of some milk and cookies "
         },
         {
-          "name": "Seafood",
-          "description": "Found in the ocean"
-        },
-        {
-          "name": "Chinese",
-          "description": "Dim-sum, Won-ton, and that tasty tasty MSG"
-        },
-        {
           "name": "Vietnamese",
           "description": "Vietnamese food, the healthier, cleaner, herbier tasting food"
-        },
-        {
-          "name": "American-fusion",
-          "description": "Hawaiian practice of cooking in a pit."
-        },
-        {
-          "name": "Spicy",
-          "description": "Too hot for me"
-        },
-        {
-          "name": "Frozen",
-          "description": "Let it go"
-        },
-        {
-          "name": "Organic",
-          "description": "The all natural approach, no added anything"
-        },
-        {
-          "name": "Comfort Food",
-          "description": "Long Day? Feel Good."
-        },
-        {
-          "name": "Junk Food",
-          "description": "Long Day? Feels Bad."
-        },
-        {
-          "name": "Fast food",
-          "description": "Long Day? Save time."
-        },
-        {
-          "name": "Mexican",
-          "description": "Burrito, Tachito, Chimichonga, Tequilla. Ariba!"
-        },
-        {
-          "name": "Stir-fry",
-          "description": ""
-        },
-        {
-          "name": "Pizza",
-          "description": "Toppings on sauce on bread"
-        },
-        {
-          "name": "Coffee",
-          "description": "Don't Stop can't stop keep it going"
-        },
-        {
-          "name": "Smoothies",
-          "description": "Cool, refreshing, fruity and tasty frozen drinks"
-        },
-        {
-          "name": "Sushi",
-          "description": "Raw and on the rice"
         }
       ]
     },
