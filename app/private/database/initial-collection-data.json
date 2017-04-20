@@ -6,27 +6,27 @@
       "contents": [
         {
           "name": "Burger",
-          "description": ""
+          "description": "Tasty Beef stuffed between two buns"
         },
         {
           "name": "Vegan",
-          "description": ""
+          "description": "Nothing But Green and clean"
         },
         {
           "name": "Vegetarian",
-          "description": ""
+          "description": "Green, clean with the exception of some milk and cookies "
         },
         {
           "name": "Seafood",
-          "description": ""
+          "description": "Found in the ocean"
         },
         {
           "name": "Chinese",
-          "description": ""
+          "description": "Dim-sum, Won-ton, and that tasty tasty MSG"
         },
         {
           "name": "Vietnamese",
-          "description": ""
+          "description": "Vietnamese food, the healthier, cleaner, herbier tasting food"
         },
         {
           "name": "American-fusion",
@@ -34,31 +34,31 @@
         },
         {
           "name": "Spicy",
-          "description": ""
+          "description": "Too hot for me"
         },
         {
           "name": "Frozen",
-          "description": ""
+          "description": "Let it go"
         },
         {
           "name": "Organic",
-          "description": ""
+          "description": "The all natural approach, no added anything"
         },
         {
           "name": "Comfort Food",
-          "description": ""
+          "description": "Long Day? Feel Good."
         },
         {
           "name": "Junk Food",
-          "description": ""
+          "description": "Long Day? Feels Bad."
         },
         {
           "name": "Fast food",
-          "description": ""
+          "description": "Long Day? Save time."
         },
         {
           "name": "Mexican",
-          "description": ""
+          "description": "Burrito, Tachito, Chimichonga, Tequilla. Ariba!"
         },
         {
           "name": "Stir-fry",
@@ -66,19 +66,19 @@
         },
         {
           "name": "Pizza",
-          "description": ""
+          "description": "Toppings on sauce on bread"
         },
         {
           "name": "Coffee",
-          "description": ""
+          "description": "Don't Stop can't stop keep it going"
         },
         {
           "name": "Smoothies",
-          "description": ""
+          "description": "Cool, refreshing, fruity and tasty frozen drinks"
         },
         {
           "name": "Sushi",
-          "description": ""
+          "description": "Raw and on the rice"
         }
       ]
     },
