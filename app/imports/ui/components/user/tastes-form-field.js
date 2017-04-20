@@ -1,6 +1,6 @@
 import { Template } from 'meteor/templating';
 
-Template.Tastes_Form_Fieldd.onRendered(function onRendered() {
+Template.Tastes_Form_Field.onRendered(function onRendered() {
   this.$('.dropdown').dropdown();
 });
 
