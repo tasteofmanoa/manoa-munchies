@@ -1,7 +1,7 @@
 import { Profiles } from '/imports/api/profile/ProfileCollection';
-import { Interests } from '/imports/api/interest/InterestCollection';
+import { Tastes } from '/imports/api/taste/TasteCollection';
 
 export function removeAllEntities() {
   Profiles.removeAll();
-  Interests.removeAll();
+  Tastes.removeAll();
 }

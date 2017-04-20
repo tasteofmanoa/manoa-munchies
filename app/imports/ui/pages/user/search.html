@@ -1,10 +1,23 @@
 <template name="User_Feed_Page">
+<<<<<<< HEAD
   <div class="ui two row two column grid container">
     <div class="top aligned row">
       <div class="ui four wide column">
       </div>
       <div class="ui twelve wide left aligned column">
         <h1>Results</h1>
+=======
+  <div class="ui two column grid container">
+    <div class="ui three wide segment column">
+      <div class="ui list">
+        <div class="header item"><h3>Filter by:</h3></div>
+        <form class="ui equal width form filter-data-form item">
+          <div class="field">
+            {{> Select_Form_Control label="Tastes" options=tastes multiple=true }}
+          </div>
+          <button class="ui blue button" type="submit">Filter</button>
+        </form>
+>>>>>>> m2-tastedb-RK
       </div>
     </div>
     <div class="row">

@@ -5,6 +5,7 @@ import { $ } from 'meteor/jquery';
 
 /*                        LANDING ROUTE                       */
 
+
 export const landingPageRouteName = 'Landing_Page';
 FlowRouter.route('/', {
   name: landingPageRouteName,
@@ -13,11 +14,15 @@ FlowRouter.route('/', {
   },
 });
 
+<<<<<<< HEAD
 /*                        FOOTER ROUTE                       */
 
 
+=======
+>>>>>>> m2-tastedb-RK
 
 /*                        DIRECTORY ROUTE                       */
+
 
 function addDirectoryBodyClass() {
   $('body').addClass('directory-page-body');

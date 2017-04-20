@@ -2,83 +2,88 @@
   "comment": "Initial contents for the ManoaMunchies database. For development purposes only.",
   "collections": [
     {
-      "name": "InterestCollection",
+      "name": "TasteCollection",
       "contents": [
         {
-          "name": "Vegan",
-          "description": ""
+          "name": "American-fusion",
+          "description": "Hawaiian practice of cooking in a pit."
         },
         {
-          "name": "Vegetarian",
-          "description": ""
-        },
-        {
-          "name": "Seafood",
-          "description": ""
+          "name": "Burger",
+          "description": "Tasty Beef stuffed between two buns"
         },
         {
           "name": "Chinese",
-          "description": ""
+          "description": "Dim-sum, Won-ton, and that tasty tasty MSG"
         },
         {
-          "name": "Vietnamese",
-          "description": ""
+          "name": "Coffee",
+          "description": "Don't Stop can't stop keep it going"
         },
         {
+<<<<<<< HEAD
           "name": "American-fusion",
           "description": ""
-        },
-        {
-          "name": "Spicy",
-          "description": ""
-        },
-        {
-          "name": "Frozen",
-          "description": ""
-        },
-        {
-          "name": "Organic",
-          "description": ""
-        },
-        {
+=======
           "name": "Comfort Food",
-          "description": ""
-        },
-        {
-          "name": "Junk Food",
-          "description": ""
+          "description": "Long Day? Feel Good."
+>>>>>>> m2-tastedb-RK
         },
         {
           "name": "Fast food",
-          "description": ""
+          "description": "Long Day? Save time."
+        },
+        {
+          "name": "Frozen",
+          "description": "Let it go"
+        },
+        {
+          "name": "Junk Food",
+          "description": "Long Day? Feels Bad."
         },
         {
           "name": "Mexican",
-          "description": ""
+          "description": "Burrito, Tachito, Chimichonga, Tequilla. Ariba!"
+        },
+        {
+          "name": "Organic",
+          "description": "The all natural approach, no added anything"
+        },
+        {
+          "name": "Pizza",
+          "description": "Toppings on sauce on bread"
+        },
+        {
+          "name": "Seafood",
+          "description": "Found in the ocean"
+        },
+        {
+          "name": "Smoothies",
+          "description": "Cool, refreshing, fruity and tasty frozen drinks"
+        },
+        {
+          "name": "Spicy",
+          "description": "Too hot for me"
         },
         {
           "name": "Stir-fry",
           "description": ""
         },
         {
-          "name": "Pizza",
-          "description": ""
-        },
-        {
-          "name": "Burger",
-          "description": ""
-        },
-        {
-          "name": "Coffee",
-          "description": ""
-        },
-        {
-          "name": "Smoothies",
-          "description": ""
-        },
-        {
           "name": "Sushi",
-          "description": ""
+          "description": "Raw and on the rice"
+        },
+        {
+          "name": "Vegan",
+          "description": "Nothing But Green and clean"
+        },
+        {
+          "name": "Vegetarian",
+          "description": "Green, clean with the exception of some milk and cookies "
+        },
+        {
+          "name": "Vietnamese",
+          "description": "Vietnamese food, the healthier, cleaner, herbier tasting food"
         }
       ]
     },
@@ -90,7 +95,7 @@
           "lastName": "Doe",
           "username": "jdoe",
           "bio": "I'm just trying to find myself through food.",
-          "interests": [
+          "tastes": [
             "Sushi"
           ],
           "title": "",
@@ -101,7 +106,7 @@
           "lastName": "Sanchez",
           "username": "rsanchez",
           "bio": "Wub-a-lub-a-dub-dub",
-          "interests": [
+          "tastes": [
             "Sushi"
           ],
           "title": "",
@@ -112,7 +117,7 @@
           "lastName": "Skywalker",
           "username": "askywalker",
           "bio": "I'm just going through some troubling times right now.",
-          "interests": [
+          "tastes": [
             "Sushi"
           ],
           "title": "",
@@ -123,7 +128,7 @@
           "lastName": "acc",
           "username": "420blzit",
           "bio": "I'm just hungry all the time.",
-          "interests": [
+          "tastes": [
             "Sushi"
           ],
           "title": "",
@@ -134,7 +139,7 @@
           "lastName": "Croft",
           "username": "lcroft",
           "bio": "I raid Tombs and stuff.",
-          "interests": [
+          "tastes": [
             "Sushi"
           ],
           "title": "",
