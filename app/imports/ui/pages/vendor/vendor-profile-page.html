@@ -1,100 +1,335 @@
 <template name="Vendor_Profile_Page">
   {{#if Template.subscriptionsReady}}
-  <div style="margin-top: 10px" class="ui three row four column grid container">
-    <div class="top aligned centered row">
-        <h1>Top Matches</h1>
-    </div>
+  <div class="ui two row two column grid container">
     <div class="top aligned row">
-      <div class="ui three wide segment column">
-        <form class="ui equal width form filter-data-form">
-          <div class="field">
-            <a class="ui label" data-value="Open Now">Open Now<i class="delete icon"></i></a>
-            <a class="ui label" data-value="Seafood">Seafood<i class="delete icon"></i></a>
-            <a class="ui label" data-value="Breakfast">Breakfast<i class="delete icon"></i></a>
-            <a class="ui label" data-value="Vegan">Vegan<i class="delete icon"></i></a>
-            <hr>
-          </div>
-          <button class="ui blue button" type="submit">Filter</button>
-        </form>
-      </div>
       <div class="ui four wide column">
-        <div class="ui card">
-          <div class="image">
-            <img src="/images/poke-plate.jpg">
-          </div>
-          <div class="content">
-            <a class="header">Vendor Name</a>
-            <div class="meta">
-              <a>Tags</a>
-            </div>
-          </div>
-          <div class="extra content">
-            <div class="meta">
-              <p> Description</p>
-            </div>
-          </div>
-          <div class="extra content">
-            <a>
-              <i class="thumbs up icon"></i>
-              33 Likes
-            </a>
-          </div>
-        </div>
       </div>
-      <div class="ui four wide column">
-        <div class="ui card">
-          <div class="image">
-            <img src="/images/uahi-island-grill.jpg">
-          </div>
-          <div class="content">
-            <a class="header">Vendor Name</a>
-            <div class="meta">
-              <a>Tags</a>
-            </div>
-          </div>
-          <div class="extra content">
-            <div class="meta">
-              <p> Description</p>
-            </div>
-          </div>
-          <div class="extra content">
-            <a>
-              <i class="thumbs up icon"></i>
-              33 Likes
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="ui four wide column">
-        <div class="ui card">
-          <div class="image">
-            <img src="/images/crepe-cafe.jpg">
-          </div>
-          <div class="content">
-            <a class="header">Vendor Name</a>
-            <div class="meta">
-              <a>Tags</a>
-            </div>
-          </div>
-          <div class="extra content">
-            <div class="meta">
-              <p> Description</p>
-            </div>
-          </div>
-          <div class="extra content">
-            <a>
-              <i class="thumbs up icon"></i>
-              33 Likes
-            </a>
-          </div>
-        </div>
+      <div class="ui twelve wide left aligned column">
+        <h1>Our vendors</h1>
       </div>
     </div>
-    <div class="top aligned centered row">
-      <button class="ui right labeled icon button">
-        <i class="right arrow icon"></i>
-        Next Three
-      </button>
+    <div class="row">
+      <div class="ui four wide column">
+        <div class="ui segment">
+          <h3>Filters</h3>
+          <form class="ui equal width form filter-data-form">
+            <div class="field">
+              <div class="ui list">
+                <div class="ui checkbox">
+                  <input type="checkbox" name="example">
+                  <label>Open now</label>
+                </div>
+                <div class="ui checkbox">
+                  <input type="checkbox" name="example">
+                  <label>Accepts meal plan points</label>
+                </div>
+                <div class="ui checkbox">
+                  <input type="checkbox" name="example">
+                  <label>Accepts dining dollars</label>
+                </div>
+              </div>
+            </div>
+            <div class="ui bold text item" style="font-weight: bold">Sort by</div>
+            <div class="field">
+              <div class="ui list">
+                <a class="ui item">Popularity</a>
+                <a class="ui item">Highest Rated</a>
+                <a class="ui item">Most Reviewed</a>
+              </div>
+            </div>
+            <div class="field">
+              {{> Select_Form_Control label="Tastes" options=interests multiple=true }}
+            </div>
+            <button class="ui blue button" type="submit">Filter</button>
+          </form>
+        </div>
+      </div>
+      <div class="ui top aligned twelve wide column">
+        <div class="ui three row grid container">
+          <div class="row">
+            <div class="ui three cards">
+              <div class="ui card">
+                <div class="ui fluid image">
+                  <div class="ui top right ribbon green label">4.5</div>
+                  <img src="/images/uahi-island-grill.jpg">
+                </div>
+                <div class="content">
+                  <a class="header">Vendor Name</a>
+                  <div class="meta">
+                    <div class="item">MTWRF - Time to Time</div>
+                    <div class="item">Location</div>
+                  </div>
+                  <div style="margin-top: 5px">
+                    <a class="ui blue tag small label">Tags</a>
+                    <a class="ui blue tag small label">Tags</a>
+                  </div>
+                </div>
+                <div class="content">
+                  <div class="meta">
+                    <p> Description</p>
+                  </div>
+                </div>
+                <div class="content">
+                  <i class="star icon"></i>
+                  42 Reviews
+                  <span class="right floated">
+      <i class="heart outline like icon"></i>
+      42 Favorites
+    </span>
+                </div>
+              </div>
+              <div class="ui card">
+                <div class="ui fluid image">
+                  <div class="ui top right ribbon green label">4.5</div>
+                  <img src="/images/uahi-island-grill.jpg">
+                </div>
+                <div class="content">
+                  <a class="header">Vendor Name</a>
+                  <div class="meta">
+                    <div class="item">MTWRF - Time to Time</div>
+                    <div class="item">Location</div>
+                  </div>
+                  <div style="margin-top: 5px">
+                    <a class="ui blue tag small label">Tags</a>
+                    <a class="ui blue tag small label">Tags</a>
+                  </div>
+                </div>
+                <div class="content">
+                  <div class="meta">
+                    <p> Description</p>
+                  </div>
+                </div>
+                <div class="content">
+                  <i class="star icon"></i>
+                  42 Reviews
+                  <span class="right floated">
+      <i class="heart outline like icon"></i>
+      42 Favorites
+    </span>
+                </div>
+              </div>
+              <div class="ui card">
+                <div class="ui fluid image">
+                  <div class="ui top right ribbon green label">4.5</div>
+                  <img src="/images/uahi-island-grill.jpg">
+                </div>
+                <div class="content">
+                  <a class="header">Vendor Name</a>
+                  <div class="meta">
+                    <div class="item">MTWRF - Time to Time</div>
+                    <div class="item">Location</div>
+                  </div>
+                  <div style="margin-top: 5px">
+                    <a class="ui blue tag small label">Tags</a>
+                    <a class="ui blue tag small label">Tags</a>
+                  </div>
+                </div>
+                <div class="content">
+                  <div class="meta">
+                    <p> Description</p>
+                  </div>
+                </div>
+                <div class="content">
+                  <i class="star icon"></i>
+                  42 Reviews
+                  <span class="right floated">
+      <i class="heart outline like icon"></i>
+      42 Favorites
+    </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="ui three cards">
+              <div class="ui card">
+                <div class="ui fluid image">
+                  <div class="ui top right ribbon green label">4.5</div>
+                  <img src="/images/uahi-island-grill.jpg">
+                </div>
+                <div class="content">
+                  <a class="header">Vendor Name</a>
+                  <div class="meta">
+                    <div class="item">MTWRF - Time to Time</div>
+                    <div class="item">Location</div>
+                  </div>
+                  <div style="margin-top: 5px">
+                    <a class="ui blue tag small label">Tags</a>
+                    <a class="ui blue tag small label">Tags</a>
+                  </div>
+                </div>
+                <div class="content">
+                  <div class="meta">
+                    <p> Description</p>
+                  </div>
+                </div>
+                <div class="content">
+                  <i class="star icon"></i>
+                  42 Reviews
+                  <span class="right floated">
+      <i class="heart outline like icon"></i>
+      42 Favorites
+    </span>
+                </div>
+              </div>
+              <div class="ui card">
+                <div class="ui fluid image">
+                  <div class="ui top right ribbon green label">4.5</div>
+                  <img src="/images/uahi-island-grill.jpg">
+                </div>
+                <div class="content">
+                  <a class="header">Vendor Name</a>
+                  <div class="meta">
+                    <div class="item">MTWRF - Time to Time</div>
+                    <div class="item">Location</div>
+                  </div>
+                  <div style="margin-top: 5px">
+                    <a class="ui blue tag small label">Tags</a>
+                    <a class="ui blue tag small label">Tags</a>
+                  </div>
+                </div>
+                <div class="content">
+                  <div class="meta">
+                    <p> Description</p>
+                  </div>
+                </div>
+                <div class="content">
+                  <i class="star icon"></i>
+                  42 Reviews
+                  <span class="right floated">
+      <i class="heart outline like icon"></i>
+      42 Favorites
+    </span>
+                </div>
+              </div>
+              <div class="ui card">
+                <div class="ui fluid image">
+                  <div class="ui top right ribbon green label">4.5</div>
+                  <img src="/images/uahi-island-grill.jpg">
+                </div>
+                <div class="content">
+                  <a class="header">Vendor Name</a>
+                  <div class="meta">
+                    <div class="item">MTWRF - Time to Time</div>
+                    <div class="item">Location</div>
+                  </div>
+                  <div style="margin-top: 5px">
+                    <a class="ui blue tag small label">Tags</a>
+                    <a class="ui blue tag small label">Tags</a>
+                  </div>
+                </div>
+                <div class="content">
+                  <div class="meta">
+                    <p> Description</p>
+                  </div>
+                </div>
+                <div class="content">
+                  <i class="star icon"></i>
+                  42 Reviews
+                  <span class="right floated">
+      <i class="heart outline like icon"></i>
+      42 Favorites
+    </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="ui three cards">
+              <div class="ui card">
+                <div class="ui fluid image">
+                  <div class="ui top right ribbon green label">4.5</div>
+                  <img src="/images/uahi-island-grill.jpg">
+                </div>
+                <div class="content">
+                  <a class="header">Vendor Name</a>
+                  <div class="meta">
+                    <div class="item">MTWRF - Time to Time</div>
+                    <div class="item">Location</div>
+                  </div>
+                  <div style="margin-top: 5px">
+                    <a class="ui blue tag small label">Tags</a>
+                    <a class="ui blue tag small label">Tags</a>
+                  </div>
+                </div>
+                <div class="content">
+                  <div class="meta">
+                    <p> Description</p>
+                  </div>
+                </div>
+                <div class="content">
+                  <i class="star icon"></i>
+                  42 Reviews
+                  <span class="right floated">
+      <i class="heart outline like icon"></i>
+      42 Favorites
+    </span>
+                </div>
+              </div>
+              <div class="ui card">
+                <div class="ui fluid image">
+                  <div class="ui top right ribbon green label">4.5</div>
+                  <img src="/images/uahi-island-grill.jpg">
+                </div>
+                <div class="content">
+                  <a class="header">Vendor Name</a>
+                  <div class="meta">
+                    <div class="item">MTWRF - Time to Time</div>
+                    <div class="item">Location</div>
+                  </div>
+                  <div style="margin-top: 5px">
+                    <a class="ui blue tag small label">Tags</a>
+                    <a class="ui blue tag small label">Tags</a>
+                  </div>
+                </div>
+                <div class="content">
+                  <div class="meta">
+                    <p> Description</p>
+                  </div>
+                </div>
+                <div class="content">
+                  <i class="star icon"></i>
+                  42 Reviews
+                  <span class="right floated">
+      <i class="heart outline like icon"></i>
+      42 Favorites
+    </span>
+                </div>
+              </div>
+              <div class="ui card">
+                <div class="ui fluid image">
+                  <div class="ui top right ribbon green label">4.5</div>
+                  <img src="/images/uahi-island-grill.jpg">
+                </div>
+                <div class="content">
+                  <a class="header">Vendor Name</a>
+                  <div class="meta">
+                    <div class="item">MTWRF - Time to Time</div>
+                    <div class="item">Location</div>
+                  </div>
+                  <div style="margin-top: 5px">
+                    <a class="ui blue tag small label">Tags</a>
+                    <a class="ui blue tag small label">Tags</a>
+                  </div>
+                </div>
+                <div class="content">
+                  <div class="meta">
+                    <p> Description</p>
+                  </div>
+                </div>
+                <div class="content">
+                  <i class="star icon"></i>
+                  42 Reviews
+                  <span class="right floated">
+      <i class="heart outline like icon"></i>
+      42 Favorites
+    </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   {{/if}}
