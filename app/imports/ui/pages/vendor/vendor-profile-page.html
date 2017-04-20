@@ -1,2 +1,103 @@
 <template name="Vendor_Profile_Page">
+  {{#if Template.subscriptionsReady}}
+  <div style="margin-top: 10px" class="ui three row four column grid container">
+    <div class="top aligned centered row">
+        <h1>Top Matches</h1>
+    </div>
+    <div class="top aligned row">
+      <div class="ui three wide segment column">
+        <form class="ui equal width form filter-data-form">
+          <div class="field">
+            <a class="ui label" data-value="Open Now">Open Now<i class="delete icon"></i></a>
+            <a class="ui label" data-value="Seafood">Seafood<i class="delete icon"></i></a>
+            <a class="ui label" data-value="Breakfast">Breakfast<i class="delete icon"></i></a>
+            <a class="ui label" data-value="Vegan">Vegan<i class="delete icon"></i></a>
+            <hr>
+          </div>
+          <button class="ui blue button" type="submit">Filter</button>
+        </form>
+      </div>
+      <div class="ui four wide column">
+        <div class="ui card">
+          <div class="image">
+            <img src="/images/poke-plate.jpg">
+          </div>
+          <div class="content">
+            <a class="header">Vendor Name</a>
+            <div class="meta">
+              <a>Tags</a>
+            </div>
+          </div>
+          <div class="extra content">
+            <div class="meta">
+              <p> Description</p>
+            </div>
+          </div>
+          <div class="extra content">
+            <a>
+              <i class="thumbs up icon"></i>
+              33 Likes
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="ui four wide column">
+        <div class="ui card">
+          <div class="image">
+            <img src="/images/uahi-island-grill.jpg">
+          </div>
+          <div class="content">
+            <a class="header">Vendor Name</a>
+            <div class="meta">
+              <a>Tags</a>
+            </div>
+          </div>
+          <div class="extra content">
+            <div class="meta">
+              <p> Description</p>
+            </div>
+          </div>
+          <div class="extra content">
+            <a>
+              <i class="thumbs up icon"></i>
+              33 Likes
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="ui four wide column">
+        <div class="ui card">
+          <div class="image">
+            <img src="/images/crepe-cafe.jpg">
+          </div>
+          <div class="content">
+            <a class="header">Vendor Name</a>
+            <div class="meta">
+              <a>Tags</a>
+            </div>
+          </div>
+          <div class="extra content">
+            <div class="meta">
+              <p> Description</p>
+            </div>
+          </div>
+          <div class="extra content">
+            <a>
+              <i class="thumbs up icon"></i>
+              33 Likes
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="top aligned centered row">
+      <button class="ui right labeled icon button">
+        <i class="right arrow icon"></i>
+        Next Three
+      </button>
+    </div>
+
+  </div>
+  {{/if}}
 </template>
+
