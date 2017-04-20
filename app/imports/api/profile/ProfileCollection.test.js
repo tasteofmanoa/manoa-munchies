@@ -18,10 +18,9 @@ if (Meteor.isServer) {
     const tastes = [tasteName];
     const picture = 'http://philipmjohnson.org/headshot.jpg';
     const title = 'Professor Computer Science';
-    const github = 'http://github.com/philipjohnson';
     const facebook = 'http://github.com/philipjohnson';
     const instagram = 'http://github.com/philipjohnson';
-    const defineObject = { firstName, lastName, username, bio, tastes, picture, title, github, facebook, instagram };
+    const defineObject = { firstName, lastName, username, bio, tastes, picture, title, facebook, instagram };
 
     before(function setup() {
       removeAllEntities();
@@ -45,7 +44,6 @@ if (Meteor.isServer) {
       expect(doc.tastes[0]).to.equal(tasteName);
       expect(doc.picture).to.equal(picture);
       expect(doc.title).to.equal(title);
-      expect(doc.github).to.equal(github);
       expect(doc.facebook).to.equal(facebook);
       expect(doc.instagram).to.equal(instagram);
       // Check that multiple definitions with the same email address fail
