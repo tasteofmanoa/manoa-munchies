@@ -14,12 +14,10 @@ FlowRouter.route('/', {
   },
 });
 
-<<<<<<< HEAD
 /*                        FOOTER ROUTE                       */
 
 
-=======
->>>>>>> m2-tastedb-RK
+
 
 /*                        DIRECTORY ROUTE                       */
 
