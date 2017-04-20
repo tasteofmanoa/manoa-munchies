@@ -21,13 +21,8 @@
           "description": "Don't Stop can't stop keep it going"
         },
         {
-<<<<<<< HEAD
-          "name": "American-fusion",
-          "description": ""
-=======
           "name": "Comfort Food",
           "description": "Long Day? Feel Good."
->>>>>>> m2-tastedb-RK
         },
         {
           "name": "Fast food",
@@ -67,7 +62,7 @@
         },
         {
           "name": "Stir-fry",
-          "description": ""
+          "description": "I guess you stir it while frying it? I don't know... I'm not in Culinary Arts"
         },
         {
           "name": "Sushi",
@@ -75,11 +70,11 @@
         },
         {
           "name": "Vegan",
-          "description": "Nothing But Green and clean"
+          "description": "Nothing But Green and clean... and Oreos..."
         },
         {
           "name": "Vegetarian",
-          "description": "Green, clean with the exception of some milk and cookies "
+          "description": "Green, clean with the exception of some milk and cookies"
         },
         {
           "name": "Vietnamese",
@@ -94,12 +89,13 @@
           "firstName": "John",
           "lastName": "Doe",
           "username": "jdoe",
-          "bio": "I'm just trying to find myself through food.",
+          "bio": "I'm just trying to find myself through food. ",
           "tastes": [
-            "Sushi"
+            "American-fusion",
+            "Frozen"
           ],
           "title": "",
-          "picture": "/images/pizza-icon.png"
+          "picture": "/images/default-profile-picture.jpg"
         },
         {
           "firstName": "Rick",
@@ -107,43 +103,49 @@
           "username": "rsanchez",
           "bio": "Wub-a-lub-a-dub-dub",
           "tastes": [
-            "Sushi"
+            "Burger",
+            "Comfort Food",
+            "Mexican"
           ],
           "title": "",
-          "picture": "/images/pizza-icon.png"
+          "picture": "/images/default-profile-picture.jpg"
         },
         {
           "firstName": "Anakin",
           "lastName": "Skywalker",
           "username": "askywalker",
-          "bio": "I'm just going through some troubling times right now.",
+          "bio": "Yeah, I know I'm a child prodigy of the force but like... you guys don't know what I'm going through. I'm just going through some troubling times right now.",
           "tastes": [
+            "Spicy",
             "Sushi"
+
           ],
           "title": "",
-          "picture": "/images/pizza-icon.png"
+          "picture": "/images/default-profile-picture.jpg"
         },
         {
           "firstName": "troll",
           "lastName": "acc",
           "username": "420blzit",
-          "bio": "I'm just hungry all the time.",
+          "bio": "Everything just tastes good! So, I just give everything fives and favorite it. I'm just hungry all the time, okay!?",
           "tastes": [
-            "Sushi"
+            "Junk Food"
           ],
           "title": "",
-          "picture": "/images/pizza-icon.png"
+          "picture": "/images/default-profile-picture.jpg"
         },
         {
           "firstName": "Lara",
           "lastName": "Croft",
           "username": "lcroft",
-          "bio": "I raid Tombs and stuff.",
+          "bio": "I raid Tombs and stuff. I guess you could say I'm quite the adventurous gal.",
           "tastes": [
-            "Sushi"
+            "Comfort Food",
+            "Sushi",
+            "Seafood"
           ],
           "title": "",
-          "picture": "/images/pizza-icon.png"
+          "picture": "/images/default-profile-picture.jpg"
         }
       ]
     }
