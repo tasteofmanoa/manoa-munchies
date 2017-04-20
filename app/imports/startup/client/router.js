@@ -13,6 +13,10 @@ FlowRouter.route('/', {
   },
 });
 
+/*                        FOOTER ROUTE                       */
+
+
+
 /*                        DIRECTORY ROUTE                       */
 
 function addDirectoryBodyClass() {
