@@ -1,5 +1,5 @@
-import { Interests } from '/imports/api/interest/InterestCollection';
+import { Tastes } from '/imports/api/taste/TasteCollection';
 import { Profiles } from '/imports/api/profile/ProfileCollection';
 
-Interests.publish();
+Tastes.publish();
 Profiles.publish();
