@@ -1,6 +1,7 @@
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 import BaseCollection from '/imports/api/base/BaseCollection';
 import { Tastes } from '/imports/api/taste/TasteCollection';
+import { Munchies } from '/imports/api/taste/MunchiesCollection';
 import { check } from 'meteor/check';
 import { Meteor } from 'meteor/meteor';
 
@@ -23,6 +24,7 @@ class ProfileCollection extends BaseCollection {
       lastName: { type: String, optional: true },
       bio: { type: String, optional: true },
       tastes: { type: [String], optional: true },
+      favorites: {type: [String], optional: true},
       title: { type: String, optional: true },
       picture: { type: SimpleSchema.RegEx.Url, optional: true },
       facebook: { type: SimpleSchema.RegEx.Url, optional: true },
@@ -50,7 +52,7 @@ class ProfileCollection extends BaseCollection {
    * if one or more tastes are not defined, or if facbeook and instagram are not URLs.
    * @returns The newly created docID.
    */
-  define({ firstName = '', lastName = '', username, bio = '', tastes, picture = '', title = '',
+  define({ firstName = '', lastName = '', username, bio = '', tastes, favorites, picture = '', title = '',
       facebook = '', instagram = '' }) {
     // make sure required fields are OK.
     const checkPattern = { firstName: String, lastName: String, username: String, bio: String, picture: String,
@@ -63,7 +65,8 @@ class ProfileCollection extends BaseCollection {
 
     // Throw an error if any of the passed Taste names are not defined.
     Tastes.assertNames(tastes);
-    return this._collection.insert({ firstName, lastName, username, bio, tastes, picture, title,
+    Munchies.assertNames(favorites);
+    return this._collection.insert({ firstName, lastName, username, bio, tastes, favorites, picture, title,
       facebook, instagram });
   }
 
@@ -79,6 +82,7 @@ class ProfileCollection extends BaseCollection {
     const username = doc.username;
     const bio = doc.bio;
     const tastes = doc.tastes;
+    const favorites = doc.favorites;
     const picture = doc.picture;
     const title = doc.title;
     const facebook = doc.facebook;

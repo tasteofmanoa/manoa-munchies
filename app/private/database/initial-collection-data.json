@@ -49,6 +49,10 @@
           "description": "Toppings on sauce on bread"
         },
         {
+          "name": "Savory",
+          "description": "Dat umami flavor"
+        },
+        {
           "name": "Seafood",
           "description": "Found in the ocean"
         },
@@ -83,6 +87,40 @@
       ]
     },
     {
+      "name": "MunchieCollection",
+      "contents":
+      [
+        {
+          "name": "Furikake Chicken Salad",
+          "vendor": "Uahi Island Grill",
+          "description": "It's just furikake chicken in a salad...",
+          "available":
+          [
+            {
+              day: "Monday",
+              start: 1000,
+              end: 1400
+            },
+            {
+              day: "Wednesday",
+              start: 1000,
+              end: 1400
+            },
+            {
+              day: "Friday",
+              start: 1000,
+              end: 1400
+            }
+          ],
+          "tastes": {
+            "Comfort Food"
+          },
+          "location": "Kennedy Theatre",
+          "picture": "images/uahi-island-grill.jpg"
+        }
+      ]
+    },
+    {
       "name": "ProfileCollection",
       "contents": [
         {
@@ -93,6 +131,9 @@
           "tastes": [
             "American-fusion",
             "Frozen"
+          ],
+          "favorites": [
+            "Furikake Chicken Salad"
           ],
           "title": "",
           "picture": "/images/default-profile-picture.jpg"
