@@ -1,7 +1,7 @@
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 import BaseCollection from '/imports/api/base/BaseCollection';
 import { Tastes } from '/imports/api/taste/TasteCollection';
-import { Munchies } from '/imports/api/taste/MunchiesCollection';
+import { Munchies } from '/imports/api/munchie/MunchieCollection';
 import { check } from 'meteor/check';
 import { Meteor } from 'meteor/meteor';
 

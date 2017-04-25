@@ -26,6 +26,7 @@ class MunchieCollection extends BaseCollection {
       available: { type: [Available], optional: true },
       tastes: { type: [String], optional: true },
       location: { type: String, optional: true },
+      rating: {type: Number, option: true},
       picture: { type: SimpleSchema.RegEx.Url, optional: true }
     }));
   }
@@ -49,9 +50,9 @@ class MunchieCollection extends BaseCollection {
    * @returns The newly created docID.
    */
 
-  define({ name = '', vendor = '', description = '', available, tastes, location = '', picture = ''}) {
+  define({ name = '', vendor = '', description = '', available, tastes, location = '', rating, picture = ''}) {
     // make sure required fields are OK.
-    const checkPattern = { name: String, vendor: String, description: String, location: String, picture: String};
+    const checkPattern = { name: String, vendor: String, description: String, location: String, rating: Number, picture: String};
     check({ name, vendor, description, location, picture }, checkPattern);
 
     if (this.find({ name, vendor }).count() > 0) {
@@ -60,7 +61,7 @@ class MunchieCollection extends BaseCollection {
 
     // Throw an error if any of the passed Taste names are not defined.
     Tastes.assertNames(tastes);
-    return this._collection.insert({ name, vendor, description, available, tastes, location, picture });
+    return this._collection.insert({ name, vendor, description, available, tastes, location, rating, picture });
   }
 
   /**
@@ -134,6 +135,7 @@ class MunchieCollection extends BaseCollection {
     const available = doc.available;
     const tastes = doc.tastes;
     const location = doc.location;
+    const rating = doc.rating;
     const picture = doc.picture;
     return { name, vendor, description, available, tastes, location, picture  };
   }
