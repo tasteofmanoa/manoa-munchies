@@ -3,7 +3,7 @@ import BaseCollection from '/imports/api/base/BaseCollection';
 import { Tastes } from '/imports/api/taste/TasteCollection';
 import { check } from 'meteor/check';
 import { Meteor } from 'meteor/meteor';
-import 'imports/api/available/available.js';
+import { AvailableSchema } from '/imports/api/avaialble/avalableSchema';;
 
 /** @module Munchie */
 
@@ -23,7 +23,7 @@ class MunchieCollection extends BaseCollection {
       name: { type: String, optional: true },
       vendor: { type: String, optional: true },
       description: { type: String, optional: true },
-      available: { type: [Date], optional: true },
+      available: { type: [AvailableSchema], optional: true },
       tastes: { type: [String], optional: true },
       location: { type: String, optional: true },
       rating: {type: Number, option: true},
