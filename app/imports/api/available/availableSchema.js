@@ -1,6 +1,6 @@
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 
-export AvailableSchema = new SimpleSchema({
+AvailableSchema = new SimpleSchema({
   "day": {
     type: Number,
     min: 1,

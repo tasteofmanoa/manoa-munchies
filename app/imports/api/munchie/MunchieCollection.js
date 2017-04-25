@@ -23,10 +23,10 @@ class MunchieCollection extends BaseCollection {
       name: { type: String, optional: true },
       vendor: { type: String, optional: true },
       description: { type: String, optional: true },
-      available: {type: [String], optional: true},
+      available: {type: [AvailableSchema], optional: true},
       tastes: { type: [String], optional: true },
       location: { type: String, optional: true },
-      rating: {type: Number, option: true},
+      rating: { type: Number, option: true, min: 1, max: 5 },
       picture: { type: SimpleSchema.RegEx.Url, optional: true }
     }));
   }
@@ -53,7 +53,7 @@ class MunchieCollection extends BaseCollection {
   define({ name = '', vendor = '', description = '', available, tastes, location = '', rating, picture = ''}) {
     // make sure required fields are OK.
     const checkPattern = { name: String, vendor: String, description: String, location: String, rating: Number, picture: String};
-    check({ name, vendor, description, location, picture }, checkPattern);
+    check({ name, vendor, description, location, rating, picture }, checkPattern);
 
     if (this.find({ name, vendor }).count() > 0) {
       throw new Meteor.Error(`${name} is previously defined in another Munchie of the same ${vendor}`);
@@ -137,7 +137,7 @@ class MunchieCollection extends BaseCollection {
     const location = doc.location;
     const rating = doc.rating;
     const picture = doc.picture;
-    return { name, vendor, description, available, tastes, location, picture  };
+    return { name, vendor, description, available, tastes, location, rating, picture  };
   }
 }
 
