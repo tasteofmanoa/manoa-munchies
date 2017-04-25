@@ -96,21 +96,7 @@
           "description": "It's just furikake chicken in a salad...",
           "available":
           [
-            {
-              day: "Monday",
-              start: 1000,
-              end: 1400
-            },
-            {
-              day: "Wednesday",
-              start: 1000,
-              end: 1400
-            },
-            {
-              day: "Friday",
-              start: 1000,
-              end: 1400
-            }
+            
           ],
           "tastes": {
             "Comfort Food"

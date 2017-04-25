@@ -8,7 +8,7 @@ import 'imports/api/available/available.js';
 /** @module Munchie */
 
 /**
- * Munchies provide portfolio data for a user.
+ * Munchies provide food and time data for a user.
  * @extends module:Base~BaseCollection
  */
 
@@ -23,7 +23,7 @@ class MunchieCollection extends BaseCollection {
       name: { type: String, optional: true },
       vendor: { type: String, optional: true },
       description: { type: String, optional: true },
-      available: { type: [Available], optional: true },
+      available: { type: [Date], optional: true },
       tastes: { type: [String], optional: true },
       location: { type: String, optional: true },
       rating: {type: Number, option: true},
