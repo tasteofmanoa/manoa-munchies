@@ -3,7 +3,6 @@ import BaseCollection from '/imports/api/base/BaseCollection';
 import { Tastes } from '/imports/api/taste/TasteCollection';
 import { check } from 'meteor/check';
 import { Meteor } from 'meteor/meteor';
-import { AvailableSchema } from '/imports/api/available/availableSchema';;
 
 /** @module Munchie */
 
@@ -14,7 +13,6 @@ import { AvailableSchema } from '/imports/api/available/availableSchema';;
 
 class MunchieCollection extends BaseCollection {
 
-
   /**
    * Creates the Munchie collection.
    */
@@ -23,10 +21,21 @@ class MunchieCollection extends BaseCollection {
       name: { type: String, optional: true },
       vendor: { type: String, optional: true },
       description: { type: String, optional: true },
-      available: {type: [AvailableSchema], optional: true},
+      available: { type: [Object], optional: true },
+      "available.$.day": {
+        type: Number,
+        min: 1,
+        max: 7
+      },
+      "available.$.start": {
+        type: String,
+      },
+      "available.$.end": {
+        type: String,
+      },
       tastes: { type: [String], optional: true },
       location: { type: String, optional: true },
-      rating: { type: Number, option: true, min: 1, max: 5 },
+      rating: { type: Number, optional: true, min: 1, max: 5 },
       picture: { type: SimpleSchema.RegEx.Url, optional: true }
     }));
   }
@@ -50,9 +59,16 @@ class MunchieCollection extends BaseCollection {
    * @returns The newly created docID.
    */
 
-  define({ name = '', vendor = '', description = '', available, tastes, location = '', rating, picture = ''}) {
+  define({ name = '', vendor = '', description = '', available, tastes, location = '', rating = '', picture = '' }) {
     // make sure required fields are OK.
-    const checkPattern = { name: String, vendor: String, description: String, location: String, rating: Number, picture: String};
+    const checkPattern = {
+      name: String,
+      vendor: String,
+      description: String,
+      location: String,
+      rating: Number,
+      picture: String
+    };
     check({ name, vendor, description, location, rating, picture }, checkPattern);
 
     if (this.find({ name, vendor }).count() > 0) {
@@ -137,7 +153,7 @@ class MunchieCollection extends BaseCollection {
     const location = doc.location;
     const rating = doc.rating;
     const picture = doc.picture;
-    return { name, vendor, description, available, tastes, location, rating, picture  };
+    return { name, vendor, description, available, tastes, location, rating, picture };
   }
 }
 

@@ -25,16 +25,32 @@
           "description": "Long Day? Feel Good."
         },
         {
+          "name": "Dessert",
+          "description": "Long Day? Feel Good."
+        },
+        {
           "name": "Fast food",
           "description": "Long Day? Save time."
+        },
+        {
+          "name": "French",
+          "description": "Baguette"
         },
         {
           "name": "Frozen",
           "description": "Let it go"
         },
         {
+          "name": "Fruit",
+          "description": "Get in that fiber/vitamin C"
+        },
+        {
           "name": "Junk Food",
           "description": "Long Day? Feels Bad."
+        },
+        {
+          "name": "Local Cuisine",
+          "description": "Feed the soul :)"
         },
         {
           "name": "Mexican",
@@ -73,6 +89,10 @@
           "description": "Raw and on the rice"
         },
         {
+          "name": "Sweet",
+          "description": "Feed those cavity causing bacteria"
+        },
+        {
           "name": "Vegan",
           "description": "Nothing But Green and clean... and Oreos..."
         },
@@ -88,24 +108,121 @@
     },
     {
       "name": "MunchieCollection",
-      "contents":
-      [
+      "contents": [
+        {
+          "name": "Aloha Berry Smoothie",
+          "vendor": "Da Spot",
+          "description": "Smoothie with berries... p. good",
+          "available": [
+            {
+              "day": 1,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 2,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 3,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 4,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 5,
+              "start": "1000",
+              "end": "1400"
+            }
+          ],
+          "tastes": [
+            "Comfort Food"
+          ],
+          "location": "Sustainability Courtyard",
+          "rating": 5,
+          "picture": "images/uahi-island-grill.jpg"
+        },
         {
           "name": "Furikake Chicken Salad",
           "vendor": "Uahi Island Grill",
           "description": "It's just furikake chicken in a salad...",
-          "available":
-          [
+          "available": [
             {
               "day": 1,
               "start": "1000",
-              "end":"1400"
+              "end": "1400"
+            },
+            {
+              "day": 2,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 3,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 4,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 5,
+              "start": "1000",
+              "end": "1400"
             }
           ],
-          "tastes": {
-            "Comfort Food"
-          },
+          "tastes": [
+            "Comfort Food",
+            "Local Cuisine",
+            "Savory"
+          ],
           "location": "Kennedy Theatre",
+          "rating": 5,
+          "picture": "images/uahi-island-grill.jpg"
+        },
+        {
+          "name": "Nutella and Banana Crepe",
+          "vendor": "Uahi Island Grill",
+          "description": "It's just furikake chicken in a salad...",
+          "available": [
+            {
+              "day": 1,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 2,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 3,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 4,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 5,
+              "start": "1000",
+              "end": "1400"
+            }
+          ],
+          "tastes": [
+            "Dessert",
+            "French"
+          ],
+          "location": "UH Law Library",
           "rating": 5,
           "picture": "images/uahi-island-grill.jpg"
         }
@@ -150,7 +267,6 @@
           "tastes": [
             "Spicy",
             "Sushi"
-
           ],
           "title": "",
           "picture": "/images/default-profile-picture.jpg"

@@ -28,7 +28,7 @@ class ProfileCollection extends BaseCollection {
       title: { type: String, optional: true },
       picture: { type: SimpleSchema.RegEx.Url, optional: true },
       facebook: { type: SimpleSchema.RegEx.Url, optional: true },
-      instagram: { type: SimpleSchema.RegEx.Url, optional: true },
+      instagram: { type: SimpleSchema.RegEx.Url, optional: true }
     }));
   }
 
