@@ -1,14 +1,14 @@
 /* eslint prefer-arrow-callback: "off", no-unused-expressions: "off" */
 /* eslint-env mocha */
 
-import { Profiles } from '/imports/api/profile/ProfileCollection';
+import { Munchies } from '/imports/api/profile/MunchieCollection';
 import { Tastes } from '/imports/api/taste/TasteCollection';
 import { Meteor } from 'meteor/meteor';
 import { expect } from 'chai';
 import { removeAllEntities } from '/imports/api/base/BaseUtilities';
 
 if (Meteor.isServer) {
-  describe('ProfileCollection', function testSuite() {
+  describe('MunchieCollection', function testSuite() {
     const tasteName = 'Software Engineering';
     const tasteDescription = 'Tools for software development';
     const firstName = 'Philip';
@@ -33,10 +33,10 @@ if (Meteor.isServer) {
     });
 
     it('#define, #isDefined, #removeIt, #dumpOne, #restoreOne', function test() {
-      let docID = Profiles.define(defineObject);
-      expect(Profiles.isDefined(docID)).to.be.true;
+      let docID = Munchies.define(defineObject);
+      expect(Munchies.isDefined(docID)).to.be.true;
       // Check that fields are available
-      const doc = Profiles.findDoc(docID);
+      const doc = Munchies.findDoc(docID);
       expect(doc.firstName).to.equal(firstName);
       expect(doc.lastName).to.equal(lastName);
       expect(doc.username).to.equal(username);
@@ -47,14 +47,14 @@ if (Meteor.isServer) {
       expect(doc.facebook).to.equal(facebook);
       expect(doc.instagram).to.equal(instagram);
       // Check that multiple definitions with the same email address fail
-      expect(function foo() { Profiles.define(defineObject); }).to.throw(Error);
-      // Check that we can dump and restore a Profile.
-      const dumpObject = Profiles.dumpOne(docID);
-      Profiles.removeIt(docID);
-      expect(Profiles.isDefined(docID)).to.be.false;
-      docID = Profiles.restoreOne(dumpObject);
-      expect(Profiles.isDefined(docID)).to.be.true;
-      Profiles.removeIt(docID);
+      expect(function foo() { Munchies.define(defineObject); }).to.throw(Error);
+      // Check that we can dump and restore a Munchie.
+      const dumpObject = Munchies.dumpOne(docID);
+      Munchies.removeIt(docID);
+      expect(Munchies.isDefined(docID)).to.be.false;
+      docID = Munchies.restoreOne(dumpObject);
+      expect(Munchies.isDefined(docID)).to.be.true;
+      Munchies.removeIt(docID);
     });
   });
 }

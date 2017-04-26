@@ -54,14 +54,13 @@ Template.Profile_Page.events({
     const title = event.target.Title.value;
     const username = FlowRouter.getParam('username'); // schema requires username.
     const picture = event.target.Picture.value;
-    const github = event.target.Github.value;
     const facebook = event.target.Facebook.value;
     const instagram = event.target.Instagram.value;
     const bio = event.target.Bio.value;
     const selectedTastes = _.filter(event.target.Tastes.selectedOptions, (option) => option.selected);
     const tastes = _.map(selectedTastes, (option) => option.value);
 
-    const updatedProfileData = { firstName, lastName, title, picture, github, facebook, instagram, bio, tastes,
+    const updatedProfileData = { firstName, lastName, title, picture, facebook, instagram, bio, tastes,
     username };
 
     // Clear out any old validation errors.

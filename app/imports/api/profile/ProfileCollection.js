@@ -1,6 +1,7 @@
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 import BaseCollection from '/imports/api/base/BaseCollection';
 import { Tastes } from '/imports/api/taste/TasteCollection';
+import { Munchies } from '/imports/api/munchie/MunchieCollection';
 import { check } from 'meteor/check';
 import { Meteor } from 'meteor/meteor';
 
@@ -23,11 +24,11 @@ class ProfileCollection extends BaseCollection {
       lastName: { type: String, optional: true },
       bio: { type: String, optional: true },
       tastes: { type: [String], optional: true },
+      favorites: {type: [String], optional: true},
       title: { type: String, optional: true },
       picture: { type: SimpleSchema.RegEx.Url, optional: true },
-      github: { type: SimpleSchema.RegEx.Url, optional: true },
       facebook: { type: SimpleSchema.RegEx.Url, optional: true },
-      instagram: { type: SimpleSchema.RegEx.Url, optional: true },
+      instagram: { type: SimpleSchema.RegEx.Url, optional: true }
     }));
   }
 
@@ -41,7 +42,6 @@ class ProfileCollection extends BaseCollection {
    *                   tastes: ['Application Development', 'Software Engineering', 'Databases'],
    *                   title: 'Professor of Information and Computer Sciences',
    *                   picture: 'http://philipmjohnson.org/headshot.jpg',
-   *                   github: 'https://github.com/philipmjohnson',
    *                   facebook: 'https://facebook.com/philipmjohnson',
    *                   instagram: 'https://instagram.com/philipmjohnson' });
    * @param { Object } description Object with required key username.
@@ -49,10 +49,10 @@ class ProfileCollection extends BaseCollection {
    * Username must be unique for all users. It should be the UH email account.
    * Tastes is an array of defined tastes names.
    * @throws { Meteor.Error } If a user with the supplied username already exists, or
-   * if one or more tastes are not defined, or if github, facebook, and instagram are not URLs.
+   * if one or more tastes are not defined, or if facbeook and instagram are not URLs.
    * @returns The newly created docID.
    */
-  define({ firstName = '', lastName = '', username, bio = '', tastes, picture = '', title = '', github = '',
+  define({ firstName = '', lastName = '', username, bio = '', tastes, favorites, picture = '', title = '',
       facebook = '', instagram = '' }) {
     // make sure required fields are OK.
     const checkPattern = { firstName: String, lastName: String, username: String, bio: String, picture: String,
@@ -65,7 +65,8 @@ class ProfileCollection extends BaseCollection {
 
     // Throw an error if any of the passed Taste names are not defined.
     Tastes.assertNames(tastes);
-    return this._collection.insert({ firstName, lastName, username, bio, tastes, picture, title, github,
+    Munchies.assertNames(favorites);
+    return this._collection.insert({ firstName, lastName, username, bio, tastes, favorites, picture, title,
       facebook, instagram });
   }
 
@@ -81,12 +82,12 @@ class ProfileCollection extends BaseCollection {
     const username = doc.username;
     const bio = doc.bio;
     const tastes = doc.tastes;
+    const favorites = doc.favorites;
     const picture = doc.picture;
     const title = doc.title;
-    const github = doc.github;
     const facebook = doc.facebook;
     const instagram = doc.instagram;
-    return { firstName, lastName, username, bio, tastes, picture, title, github, facebook, instagram };
+    return { firstName, lastName, username, bio, tastes, picture, title, facebook, instagram };
   }
 }
 
