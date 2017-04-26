@@ -36,7 +36,8 @@ class MunchieCollection extends BaseCollection {
       tastes: { type: [String], optional: true },
       location: { type: String, optional: true },
       rating: { type: Number, optional: true, min: 1, max: 5 },
-      picture: { type: SimpleSchema.RegEx.Url, optional: true }
+      picture: { type: SimpleSchema.RegEx.Url, optional: true },
+      reviews: { type: [Object], optional: true}
     }));
   }
 
@@ -59,7 +60,7 @@ class MunchieCollection extends BaseCollection {
    * @returns The newly created docID.
    */
 
-  define({ name = '', vendor = '', description = '', available, tastes, location = '', rating = '', picture = '' }) {
+  define({ name = '', vendor = '', description = '', available, tastes, location = '', rating = '', picture = '', reviews}) {
     // make sure required fields are OK.
     const checkPattern = {
       name: String,
@@ -153,7 +154,8 @@ class MunchieCollection extends BaseCollection {
     const location = doc.location;
     const rating = doc.rating;
     const picture = doc.picture;
-    return { name, vendor, description, available, tastes, location, rating, picture };
+    const reviews = doc.reviews;
+    return { name, vendor, description, available, tastes, location, rating, picture, reviews };
   }
 }
 
