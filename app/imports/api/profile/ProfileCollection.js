@@ -26,6 +26,7 @@ class ProfileCollection extends BaseCollection {
       tastes: { type: [String], optional: true },
       favorites: {type: [String], optional: true},
       title: { type: String, optional: true },
+      reviews: { type: [Object], optional: true },
       picture: { type: SimpleSchema.RegEx.Url, optional: true },
       facebook: { type: SimpleSchema.RegEx.Url, optional: true },
       instagram: { type: SimpleSchema.RegEx.Url, optional: true }
@@ -52,7 +53,7 @@ class ProfileCollection extends BaseCollection {
    * if one or more tastes are not defined, or if facbeook and instagram are not URLs.
    * @returns The newly created docID.
    */
-  define({ firstName = '', lastName = '', username, bio = '', tastes, favorites, picture = '', title = '',
+  define({ firstName = '', lastName = '', username, bio = '', tastes, favorites, reviews, picture = '', title = '',
       facebook = '', instagram = '' }) {
     // make sure required fields are OK.
     const checkPattern = { firstName: String, lastName: String, username: String, bio: String, picture: String,
@@ -66,7 +67,7 @@ class ProfileCollection extends BaseCollection {
     // Throw an error if any of the passed Taste names are not defined.
     Tastes.assertNames(tastes);
     Munchies.assertNames(favorites);
-    return this._collection.insert({ firstName, lastName, username, bio, tastes, favorites, picture, title,
+    return this._collection.insert({ firstName, lastName, username, bio, tastes, favorites, reviews, picture, title,
       facebook, instagram });
   }
 
@@ -83,11 +84,12 @@ class ProfileCollection extends BaseCollection {
     const bio = doc.bio;
     const tastes = doc.tastes;
     const favorites = doc.favorites;
+    const reviews = doc.reviews;
     const picture = doc.picture;
     const title = doc.title;
     const facebook = doc.facebook;
     const instagram = doc.instagram;
-    return { firstName, lastName, username, bio, tastes, picture, title, facebook, instagram };
+    return { firstName, lastName, username, bio, tastes, reviews, picture, title, facebook, instagram };
   }
 }
 
