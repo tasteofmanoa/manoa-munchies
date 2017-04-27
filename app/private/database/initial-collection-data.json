@@ -145,7 +145,7 @@
           ],
           "location": "Sustainability Courtyard",
           "rating": 5,
-          "picture": "images/uahi-island-grill.jpg"
+          "picture": "images/da-spot-smoothie.jpg"
         },
         {
           "name": "Furikake Chicken Salad",
@@ -189,8 +189,8 @@
         },
         {
           "name": "Nutella and Banana Crepe",
-          "vendor": "Uahi Island Grill",
-          "description": "It's just furikake chicken in a salad...",
+          "vendor": "Le Crepe Cafe",
+          "description": "It's a really really really flat pancake with chocolate almond spread and banana ",
           "available": [
             {
               "day": 1,
@@ -224,7 +224,7 @@
           ],
           "location": "UH Law Library",
           "rating": 5,
-          "picture": "images/uahi-island-grill.jpg"
+          "picture": "images/crepe-cafe.jpg"
         }
       ]
     },

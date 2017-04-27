@@ -36,6 +36,7 @@ class MunchieCollection extends BaseCollection {
       tastes: { type: [String], optional: true },
       location: { type: String, optional: true },
       rating: { type: Number, optional: true, min: 1, max: 5 },
+      favorites: { type: Number, optional: true },
       picture: { type: SimpleSchema.RegEx.Url, optional: true },
       reviews: { type: [Object], optional: true}
     }));
@@ -60,7 +61,7 @@ class MunchieCollection extends BaseCollection {
    * @returns The newly created docID.
    */
 
-  define({ name = '', vendor = '', description = '', available, tastes, location = '', rating = '', picture = '', reviews}) {
+  define({ name = '', vendor = '', description = '', available, tastes, location = '', rating = -1, favorites = -1, picture = '', reviews}) {
     // make sure required fields are OK.
     const checkPattern = {
       name: String,
@@ -68,9 +69,10 @@ class MunchieCollection extends BaseCollection {
       description: String,
       location: String,
       rating: Number,
+      favorites: Number,
       picture: String
     };
-    check({ name, vendor, description, location, rating, picture }, checkPattern);
+    check({ name, vendor, description, location, rating, favorites, picture }, checkPattern);
 
     if (this.find({ name, vendor }).count() > 0) {
       throw new Meteor.Error(`${name} is previously defined in another Munchie of the same ${vendor}`);
@@ -78,7 +80,7 @@ class MunchieCollection extends BaseCollection {
 
     // Throw an error if any of the passed Taste names are not defined.
     Tastes.assertNames(tastes);
-    return this._collection.insert({ name, vendor, description, available, tastes, location, rating, picture });
+    return this._collection.insert({ name, vendor, description, available, tastes, location, rating, favorites, picture, reviews });
   }
 
   /**
@@ -153,9 +155,10 @@ class MunchieCollection extends BaseCollection {
     const tastes = doc.tastes;
     const location = doc.location;
     const rating = doc.rating;
+    const favorites = doc.favorites;
     const picture = doc.picture;
     const reviews = doc.reviews;
-    return { name, vendor, description, available, tastes, location, rating, picture, reviews };
+    return { name, vendor, description, available, tastes, location, rating, favorites, picture, reviews };
   }
 }
 

@@ -5,212 +5,242 @@
     <div class="ui five wide column">
       <div class="ui fluid card">
         <div class="image">
-          <img src="/images/default-profile-picture.jpg">
+          <img src={{ profile.picture }}>
         </div>
         <div class="content">
-          <a class="header">Profile Name</a>
+          <div class="header">
+            {{ profile.firstName }} {{ profile.lastName }}
+          </div>
           <div class="meta">
-            <a>Tastes</a>
+            <p>{{ profile.title }}</p>
           </div>
-        </div>
-        <div class="extra content">
-          <div class="meta">
-            <p> Your bio here</p>
+          <p></p>
+          <div class="content">
+            Bio
+            <div class="meta">
+              <p>{{ profile.bio }}</p>
+            </div>
           </div>
-        </div>
-        <div class="extra content">
-          <a>
-            <i class="user icon"></i>
-            22 Friends
-          </a>
+          <div class="content" style="margin-top: 2px">
+            Contact/Social
+            <div class="meta">
+              <div class="ui list">
+                <div class="ui item">
+                  <a href="mailto:{{ profile.username}}@hawaii.edu"><i class="small mail icon"></i> {{profile.username}}@hawaii.edu</a>
+                </div>
+                {{#if profile.facebook }}
+                <div class="ui item"><a href="https://facebook.com/{{ profile.facebook}}"><i
+                    class="small facebook icon"></i> {{ profile.facebook}}</a></div>
+                {{/if}}
+              {{#if profile.instagram }}
+              <div class="ui item"><a href="https://instagram.com/{{ profile.instagram}}"><i
+                  class="small instagram icon"></i> {{ profile.instagram}}</a></div>
+              {{/if}}
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="ui segments">
-        <div class="ui segment">
-          <p>Feed</p>
-        </div>
-        <div class="ui segment">
-          <p>Reviews</p>
-        </div>
-        <div class="ui segment">
-          <p>Photos</p>
-        </div>
-        <div class="ui segment">
-          <p>Favorites</p>
-        </div>
-      </div>
-      <div class="ui fluid card">
-        <div class="content">
-          <a class="header">Suggested Friends</a>
-        </div>
-        <div class="extra content">
-          <div class="ui two column grid container">
-            <div class="ui four wide column">
-              <div class="ui fluid image">
-                <img src="/images/default-profile-picture.jpg">
-              </div>
-            </div>
-            <div class="ui twelve wide column">
-              <a>Suggested Friend's Name</a>
-              <button class="ui left aligned basic button">
-                <i class="icon user"></i>
-                Add Friend
-              </button>
-            </div>
-          </div>
-
-        </div>
-        <div class="extra content">
-          <div class="ui two column grid container">
-            <div class="ui four wide column">
-              <div class="ui fluid image">
-                <img src="/images/default-profile-picture.jpg">
-              </div>
-            </div>
-            <div class="ui twelve wide column">
-              <a>Suggested Friend's Name</a>
-              <button class="ui left aligned basic button">
-                <i class="icon user"></i>
-                Add Friend
-              </button>
-            </div>
-          </div>
-
-        </div>
-        <div class="extra content">
-          <div class="ui two column grid container">
-            <div class="ui four wide column">
-              <div class="ui fluid image">
-                <img src="/images/default-profile-picture.jpg">
-              </div>
-            </div>
-            <div class="ui twelve wide column">
-              <a>Suggested Friend's Name</a>
-              <button class="ui left aligned basic button">
-                <i class="icon user"></i>
-                Add Friend
-              </button>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-
-    <div class="ui eleven wide column">
-      <h1>Your Feed</h1>
-      <div class="ui fluid segment">
-        <div class="ui feed">
-          <div class="event">
-            <div class="label">
-              <img src="/images/default-profile-picture.jpg">
-            </div>
-            <div class="content">
-              <div class="summary">
-                <a class="user">
-                  Elliot Fu
-                </a> added you as a friend
-                <div class="date">
-                  1 Hour Ago
-                </div>
-              </div>
-              <div class="meta">
-                <a class="like">
-                  <i class="like icon"></i> 4 Likes
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="event">
-            <div class="label">
-              <img src="/images/default-profile-picture.jpg">
-            </div>
-            <div class="content">
-              <div class="summary">
-                <a>Helen Troy</a> added <a>2 new photos</a>
-                <div class="date">
-                  4 days ago
-                </div>
-              </div>
-              <div class="extra images">
-                <a><img src="/images/default-image.png"></a>
-                <a><img src="/images/default-image.png"></a>
-              </div>
-              <div class="meta">
-                <a class="like">
-                  <i class="like icon"></i> 1 Like
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="event">
-            <div class="label">
-              <img src="/images/default-profile-picture.jpg">
-            </div>
-            <div class="content">
-              <div class="summary">
-                <a class="user">
-                  Jenny Hess
-                </a> added you as a friend
-                <div class="date">
-                  2 Days Ago
-                </div>
-              </div>
-              <div class="meta">
-                <a class="like">
-                  <i class="like icon"></i> 8 Likes
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="event">
-            <div class="label">
-              <img src="/images/default-profile-picture.jpg">
-            </div>
-            <div class="content">
-              <div class="summary">
-                <a>Joe Henderson</a> posted a review
-                <div class="date">
-                  3 days ago
-                </div>
-              </div>
-              <div class="extra text">
-                Ho bruh, this food is so good tho.
-              </div>
-              <div class="meta">
-                <a class="like">
-                  <i class="like icon"></i> 5 Likes
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="event">
-            <div class="label">
-              <img src="/images/default-profile-picture.jpg">
-            </div>
-            <div class="content">
-              <div class="summary">
-                <a>Justen Kitsune</a> added <a>2 new photos</a>
-                <div class="date">
-                  4 days ago
-                </div>
-              </div>
-              <div class="extra images">
-                <a><img src="/images/default-image.png"></a>
-                <a><img src="/images/default-image.png"></a>
-              </div>
-              <div class="meta">
-                <a class="like">
-                  <i class="like icon"></i> 41 Likes
-                </a>
-              </div>
-            </div>
-          </div>
+      <div class="content">
+        Tastes
+        <div class="meta">
+          {{#each taste in profile.tastes }}
+          <a style="margin-bottom: 2px" class="ui blue tag tiny label">{{taste}}</a>
+          {{/each}}
         </div>
       </div>
     </div>
+
+    <div class="ui segments">
+      <div class="ui segment">
+        <p>Feed</p>
+      </div>
+      <div class="ui segment">
+        <p>Reviews</p>
+      </div>
+      <div class="ui segment">
+        <p>Photos</p>
+      </div>
+      <div class="ui segment">
+        <p>Favorites</p>
+      </div>
+      <div class="ui segment">
+        <a class>
+          <i class="user icon"></i>
+          Friends
+        </a>
+        <div class="ui small blue label">42</div>
+      </div>
+    </div>
+    <div class="ui fluid card">
+      <div class="content">
+        <a class="header">Suggested Friends</a>
+      </div>
+      <div class="extra content">
+        <div class="ui two column grid container">
+          <div class="ui four wide column">
+            <div class="ui fluid image">
+              <img src="/images/default-profile-picture.jpg">
+            </div>
+          </div>
+          <div class="ui twelve wide column">
+            <a>Suggested Friend's Name</a>
+            <button class="ui left aligned basic button">
+              <i class="icon user"></i>
+              Add Friend
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="extra content">
+        <div class="ui two column grid container">
+          <div class="ui four wide column">
+            <div class="ui fluid image">
+              <img src="/images/default-profile-picture.jpg">
+            </div>
+          </div>
+          <div class="ui twelve wide column">
+            <a>Suggested Friend's Name</a>
+            <button class="ui left aligned basic button">
+              <i class="icon user"></i>
+              Add Friend
+            </button>
+          </div>
+        </div>
+
+      </div>
+      <div class="extra content">
+        <div class="ui two column grid container">
+          <div class="ui four wide column">
+            <div class="ui fluid image">
+              <img src="/images/default-profile-picture.jpg">
+            </div>
+          </div>
+          <div class="ui twelve wide column">
+            <a>Suggested Friend's Name</a>
+            <button class="ui left aligned basic button">
+              <i class="icon user"></i>
+              Add Friend
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="ui eleven wide column">
+    <h1>Your Feed</h1>
+    <div class="ui fluid segment">
+      <div class="ui feed">
+        <div class="event">
+          <div class="label">
+            <img src="/images/default-profile-picture.jpg">
+          </div>
+          <div class="content">
+            <div class="summary">
+              <a class="user">
+                Elliot Fu
+              </a> added you as a friend
+              <div class="date">
+                1 Hour Ago
+              </div>
+            </div>
+            <div class="meta">
+              <a class="like">
+                <i class="like icon"></i> 4 Likes
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="label">
+            <img src="/images/default-profile-picture.jpg">
+          </div>
+          <div class="content">
+            <div class="summary">
+              <a>Helen Troy</a> added <a>2 new photos</a>
+              <div class="date">
+                4 days ago
+              </div>
+            </div>
+            <div class="extra images">
+              <a><img src="/images/default-image.png"></a>
+              <a><img src="/images/default-image.png"></a>
+            </div>
+            <div class="meta">
+              <a class="like">
+                <i class="like icon"></i> 1 Like
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="label">
+            <img src="/images/default-profile-picture.jpg">
+          </div>
+          <div class="content">
+            <div class="summary">
+              <a class="user">
+                Jenny Hess
+              </a> added you as a friend
+              <div class="date">
+                2 Days Ago
+              </div>
+            </div>
+            <div class="meta">
+              <a class="like">
+                <i class="like icon"></i> 8 Likes
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="label">
+            <img src="/images/default-profile-picture.jpg">
+          </div>
+          <div class="content">
+            <div class="summary">
+              <a>Joe Henderson</a> posted a review
+              <div class="date">
+                3 days ago
+              </div>
+            </div>
+            <div class="extra text">
+              Ho bruh, this food is so good tho.
+            </div>
+            <div class="meta">
+              <a class="like">
+                <i class="like icon"></i> 5 Likes
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="label">
+            <img src="/images/default-profile-picture.jpg">
+          </div>
+          <div class="content">
+            <div class="summary">
+              <a>Justen Kitsune</a> added <a>2 new photos</a>
+              <div class="date">
+                4 days ago
+              </div>
+            </div>
+            <div class="extra images">
+              <a><img src="/images/default-image.png"></a>
+              <a><img src="/images/default-image.png"></a>
+            </div>
+            <div class="meta">
+              <a class="like">
+                <i class="like icon"></i> 41 Likes
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
 
   {{/if}}
