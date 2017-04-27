@@ -1,3 +1,8 @@
-/*
- * Created by Christopher on 4/12/2017.
- */
+import { Template } from 'meteor/templating';
+import { FlowRouter } from 'meteor/kadira:flow-router';
+
+Template.User_Home_Page.helpers({
+  routeUserName() {
+    return FlowRouter.getParam('username');
+  },
+});
