@@ -62,295 +62,278 @@
         </div>
       </div>
     </div>
-
   </div>
-  <div class="ui top aligned twelve wide column" style="margin-top: 25px">
-    <div class="ui three row grid container">
-      <div class="row">
-        <div class="ui horizontal divider header" style="color: #757575; margin-bottom: 25px">Appetizers</div>
-        <div class="ui three cards">
-          <div class="ui card">
-            <div class="ui fluid image">
-              <div class="ui top right ribbon green label">4.5</div>
-              <img src="/images/crepe-cafe.jpg">
-            </div>
-            <div class="content">
-              <a class="header">Food Item</a>
-              <div class="meta">
-                <div class="item">$$Price$$</div>
-
-              </div>
-              <div style="margin-top: 5px">
-                <a class="ui green tag small label">Tags</a>
-                <a class="ui green tag small label">Tags</a>
+  <div class="ui one row two column grid container" style="margin-top: 25px">
+    <div class="row">
+      <div class="ui four wide column">
+        <div class="ui segment">
+          <h3>Filters</h3>
+          <form class="ui equal width form filter-data-form">
+            <div class="field">
+              <div class="ui list">
+                <div class="ui checkbox">
+                  <input type="checkbox" name="example">
+                  <label>Available today</label>
+                </div>
               </div>
             </div>
-            <div class="content">
-              <div class="meta">
-                <p> Description</p>
+            <div class="ui bold text item" style="font-weight: bold">Sort by</div>
+            <div class="field">
+              <div class="ui list">
+                <a class="ui item">Popularity</a>
+                <a class="ui item">Highest Rated</a>
+                <a class="ui item">Most Reviewed</a>
               </div>
             </div>
-            <div class="content">
-              <i class="star icon"></i>
-              42 Reviews
-              <span class="right floated">
+            <div class="field">
+              {{> Select_Form_Control label="Tastes" options=interests multiple=true }}
+            </div>
+            <button class="ui blue button" type="submit">Filter</button>
+          </form>
+        </div>
+      </div>
+      <div class="ui three row one twelve wide column">
+        <div class="row" style="margin-bottom: 25px">
+          <div class="ui horizontal divider header" style="color: #757575; margin-bottom: 25px">Plate Lunches</div>
+          <div class="ui three cards">
+            <div class="ui card">
+              <div class="ui fluid image">
+                <div class="ui top right ribbon green label">4.5</div>
+                <img src="/images/uahi-island-grill.jpg">
+              </div>
+              <div class="content">
+                <a class="header">Furikake Chicken Salad</a>
+                <div class="meta">
+                  <div class="item">Price: <i class="green dollar icon"></i></div>
+                  <div class="item">MTWRF | 10:00am - 2:00pm</div>
+                </div>
+                <div style="margin-top: 5px">
+                  <a class="ui blue tag small label">Savory</a>
+                  <a class="ui blue tag small label">Local Cuisine</a>
+                </div>
+              </div>
+              <div class="left aligned content">
+                <i class="star icon"></i>
+                42 Reviews
+                <span class="right floated">
       <i class="heart outline like icon"></i>
       42 Favorites
     </span>
-            </div>
-          </div>
-          <div class="ui card">
-            <div class="ui fluid image">
-              <div class="ui top right ribbon green label">4.5</div>
-              <img src="/images/crepe-cafe.jpg">
-            </div>
-            <div class="content">
-              <a class="header">Food Item</a>
-              <div class="meta">
-                <div class="item">$$Price$$</div>
-              </div>
-              <div style="margin-top: 5px">
-                <a class="ui green tag small label">Tags</a>
-                <a class="ui green tag small label">Tags</a>
               </div>
             </div>
-            <div class="content">
-              <div class="meta">
-                <p> Description</p>
+            <div class="ui card">
+              <div class="ui fluid image">
+                <div class="ui top right ribbon green label">4.5</div>
+                <img src="/images/uahi-island-grill.jpg">
               </div>
-            </div>
-            <div class="content">
-              <i class="star icon"></i>
-              42 Reviews
-              <span class="right floated">
+              <div class="content">
+                <a class="header">Furikake Chicken Salad</a>
+                <div class="meta">
+                  <div class="item">Price: <i class="green dollar icon"></i></div>
+                  <div class="item">MTWRF | 10:00am - 2:00pm</div>
+                </div>
+                <div style="margin-top: 5px">
+                  <a class="ui blue tag small label">Savory</a>
+                  <a class="ui blue tag small label">Local Cuisine</a>
+                </div>
+              </div>
+              <div class="left aligned content">
+                <i class="star icon"></i>
+                42 Reviews
+                <span class="right floated">
       <i class="heart outline like icon"></i>
       42 Favorites
     </span>
-            </div>
-          </div>
-          <div class="ui card">
-            <div class="ui fluid image">
-              <div class="ui top right ribbon green label">4.5</div>
-              <img src="/images/crepe-cafe.jpg">
-            </div>
-            <div class="content">
-              <a class="header">Food Item</a>
-              <div class="meta">
-                <div class="item">$$Price$$</div>
-              </div>
-              <div style="margin-top: 5px">
-                <a class="ui green tag small label">Tags</a>
-                <a class="ui green tag small label">Tags</a>
               </div>
             </div>
-            <div class="content">
-              <div class="meta">
-                <p> Description</p>
+            <div class="ui card">
+              <div class="ui fluid image">
+                <div class="ui top right ribbon green label">4.5</div>
+                <img src="/images/uahi-island-grill.jpg">
               </div>
-            </div>
-            <div class="content">
-              <i class="star icon"></i>
-              42 Reviews
-              <span class="right floated">
+              <div class="content">
+                <a class="header">Furikake Chicken Salad</a>
+                <div class="meta">
+                  <div class="item">Price: <i class="green dollar icon"></i></div>
+                  <div class="item">MTWRF | 10:00am - 2:00pm</div>
+                </div>
+                <div style="margin-top: 5px">
+                  <a class="ui blue tag small label">Savory</a>
+                  <a class="ui blue tag small label">Local Cuisine</a>
+                </div>
+              </div>
+              <div class="left aligned content">
+                <i class="star icon"></i>
+                42 Reviews
+                <span class="right floated">
       <i class="heart outline like icon"></i>
       42 Favorites
     </span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="ui horizontal divider header" style="color: #757575; margin-bottom: 25px">Entrees</div>
-        <div class="ui three cards">
-          <div class="ui card">
-            <div class="ui fluid image">
-              <div class="ui top right ribbon green label">4.5</div>
-              <img src="/images/poke-plate.jpg">
-            </div>
-            <div class="content">
-              <a class="header">Food Item</a>
-              <div class="meta">
-                <div class="item">$$Price$$</div>
-
+        <div class="row" style="margin-bottom: 25px">
+          <div class="ui horizontal divider header" style="color: #757575; margin-bottom: 25px">Sandwiches</div>
+          <div class="ui three cards">
+            <div class="ui card">
+              <div class="ui fluid image">
+                <div class="ui top right ribbon green label">4.5</div>
+                <img src="http://ot-foodspotting-production.s3.amazonaws.com/reviews/5762556/thumb_600.jpg?1457274089">
               </div>
-              <div style="margin-top: 5px">
-                <a class="ui green tag small label">Tags</a>
-                <a class="ui green tag small label">Tags</a>
+              <div class="content">
+                <a class="header">Kalua Pork Sandwich</a>
+                <div class="meta">
+                  <div class="item">Price: <i class="green dollar icon"></i></div>
+                  <div class="item">MTWRF | 10:00am - 2:00pm</div>
+                </div>
+                <div style="margin-top: 5px">
+                  <a class="ui blue tag small label">Savory</a>
+                  <a class="ui blue tag small label">Local Cuisine</a>
+                </div>
               </div>
-            </div>
-            <div class="content">
-              <div class="meta">
-                <p> Description</p>
-              </div>
-            </div>
-            <div class="content">
-              <i class="star icon"></i>
-              42 Reviews
-              <span class="right floated">
+              <div class="left aligned content">
+                <i class="star icon"></i>
+                42 Reviews
+                <span class="right floated">
       <i class="heart outline like icon"></i>
       42 Favorites
     </span>
-            </div>
-          </div>
-          <div class="ui card">
-            <div class="ui fluid image">
-              <div class="ui top right ribbon green label">4.5</div>
-              <img src="/images/poke-plate.jpg">
-            </div>
-            <div class="content">
-              <a class="header">Food Item</a>
-              <div class="meta">
-                <div class="item">$$Price$$</div>
-
-              </div>
-              <div style="margin-top: 5px">
-                <a class="ui green tag small label">Tags</a>
-                <a class="ui green tag small label">Tags</a>
               </div>
             </div>
-            <div class="content">
-              <div class="meta">
-                <p> Description</p>
+            <div class="ui card">
+              <div class="ui fluid image">
+                <div class="ui top right ribbon green label">4.5</div>
+                <img src="http://ot-foodspotting-production.s3.amazonaws.com/reviews/5762556/thumb_600.jpg?1457274089">
               </div>
-            </div>
-            <div class="content">
-              <i class="star icon"></i>
-              42 Reviews
-              <span class="right floated">
+              <div class="content">
+                <a class="header">Kalua Pork Sandwich</a>
+                <div class="meta">
+                  <div class="item">Price: <i class="green dollar icon"></i></div>
+                  <div class="item">MTWRF | 10:00am - 2:00pm</div>
+                </div>
+                <div style="margin-top: 5px">
+                  <a class="ui blue tag small label">Savory</a>
+                  <a class="ui blue tag small label">Local Cuisine</a>
+                </div>
+              </div>
+              <div class="left aligned content">
+                <i class="star icon"></i>
+                42 Reviews
+                <span class="right floated">
       <i class="heart outline like icon"></i>
       42 Favorites
     </span>
-            </div>
-          </div>
-          <div class="ui card">
-            <div class="ui fluid image">
-              <div class="ui top right ribbon green label">4.5</div>
-              <img src="/images/poke-plate.jpg">
-            </div>
-            <div class="content">
-              <a class="header">Food Item</a>
-              <div class="meta">
-                <div class="item">$$Price$$</div>
-
-              </div>
-              <div style="margin-top: 5px">
-                <a class="ui green tag small label">Tags</a>
-                <a class="ui green tag small label">Tags</a>
               </div>
             </div>
-            <div class="content">
-              <div class="meta">
-                <p> Description</p>
+            <div class="ui card">
+              <div class="ui fluid image">
+                <div class="ui top right ribbon green label">4.5</div>
+                <img src="http://ot-foodspotting-production.s3.amazonaws.com/reviews/5762556/thumb_600.jpg?1457274089">
               </div>
-            </div>
-            <div class="content">
-              <i class="star icon"></i>
-              42 Reviews
-              <span class="right floated">
+              <div class="content">
+                <a class="header">Kalua Pork Sandwich</a>
+                <div class="meta">
+                  <div class="item">Price: <i class="green dollar icon"></i></div>
+                  <div class="item">MTWRF | 10:00am - 2:00pm</div>
+                </div>
+                <div style="margin-top: 5px">
+                  <a class="ui blue tag small label">Savory</a>
+                  <a class="ui blue tag small label">Local Cuisine</a>
+                </div>
+              </div>
+              <div class="left aligned content">
+                <i class="star icon"></i>
+                42 Reviews
+                <span class="right floated">
       <i class="heart outline like icon"></i>
       42 Favorites
     </span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="ui horizontal divider header" style="color: #757575; margin-bottom: 25px">Desserts</div>
-        <div class="ui three cards">
-          <div class="ui card">
-            <div class="ui fluid image">
-              <div class="ui top right ribbon green label">4.5</div>
-              <img src="/images/da-spot-smoothie.jpg">
-            </div>
-            <div class="content">
-              <a class="header">Food Item</a>
-              <div class="meta">
-                <div class="item">$$Price$$</div>
-
+        <div class="row" style="margin-bottom: 25px">
+          <div class="ui horizontal divider header" style="color: #757575; margin-bottom: 25px">Beverages</div>
+          <div class="ui three cards">
+            <div class="ui card">
+              <div class="ui fluid image">
+                <div class="ui top right ribbon green label">4.5</div>
+                <img src="https://s3-media1.fl.yelpcdn.com/bphoto/q-elmUELlEES9W0fAJ-wlQ/o.jpg">
               </div>
-              <div style="margin-top: 5px">
-                <a class="ui green tag small label">Tags</a>
-                <a class="ui green tag small label">Tags</a>
+              <div class="content">
+                <a class="header">Thai Tea</a>
+                <div class="meta">
+                  <div class="item">Price: <i class="green dollar icon"></i></div>
+                  <div class="item">MTWRF | 10:00am - 2:00pm</div>
+                </div>
+                <div style="margin-top: 5px">
+                  <a class="ui blue tag small label">Sweet</a>
+                </div>
               </div>
-            </div>
-            <div class="content">
-              <div class="meta">
-                <p> Description</p>
-              </div>
-            </div>
-            <div class="content">
-              <i class="star icon"></i>
-              42 Reviews
-              <span class="right floated">
+              <div class="left aligned content">
+                <i class="star icon"></i>
+                42 Reviews
+                <span class="right floated">
       <i class="heart outline like icon"></i>
       42 Favorites
     </span>
-            </div>
-          </div>
-          <div class="ui card">
-            <div class="ui fluid image">
-              <div class="ui top right ribbon green label">4.5</div>
-              <img src="/images/da-spot-smoothie.jpg">
-            </div>
-            <div class="content">
-              <a class="header">Food Item</a>
-              <div class="meta">
-                <div class="item">$$Price$$</div>
-
-              </div>
-              <div style="margin-top: 5px">
-                <a class="ui green tag small label">Tags</a>
-                <a class="ui green tag small label">Tags</a>
               </div>
             </div>
-            <div class="content">
-              <div class="meta">
-                <p> Description</p>
+            <div class="ui card">
+              <div class="ui fluid image">
+                <div class="ui top right ribbon green label">4.5</div>
+                <img src="https://s3-media1.fl.yelpcdn.com/bphoto/q-elmUELlEES9W0fAJ-wlQ/o.jpg">
               </div>
-            </div>
-            <div class="content">
-              <i class="star icon"></i>
-              42 Reviews
-              <span class="right floated">
+              <div class="content">
+                <a class="header">Thai Tea</a>
+                <div class="meta">
+                  <div class="item">Price: <i class="green dollar icon"></i></div>
+                  <div class="item">MTWRF | 10:00am - 2:00pm</div>
+                </div>
+                <div style="margin-top: 5px">
+                  <a class="ui blue tag small label">Sweet</a>
+                </div>
+              </div>
+              <div class="left aligned content">
+                <i class="star icon"></i>
+                42 Reviews
+                <span class="right floated">
       <i class="heart outline like icon"></i>
       42 Favorites
     </span>
-            </div>
-          </div>
-          <div class="ui card">
-            <div class="ui fluid image">
-              <div class="ui top right ribbon green label">4.5</div>
-              <img src="/images/da-spot-smoothie.jpg">
-            </div>
-            <div class="content">
-              <a class="header">Food Item</a>
-              <div class="meta">
-                <div class="item">$$Price$$</div>
-
-              </div>
-              <div style="margin-top: 5px">
-                <a class="ui green tag small label">Tags</a>
-                <a class="ui green tag small label">Tags</a>
               </div>
             </div>
-            <div class="content">
-              <div class="meta">
-                <p> Description</p>
+            <div class="ui card">
+              <div class="ui fluid image">
+                <div class="ui top right ribbon green label">4.5</div>
+                <img src="https://s3-media1.fl.yelpcdn.com/bphoto/q-elmUELlEES9W0fAJ-wlQ/o.jpg">
               </div>
-            </div>
-            <div class="content">
-              <i class="star icon"></i>
-              42 Reviews
-              <span class="right floated">
+              <div class="content">
+                <a class="header">Thai Tea</a>
+                <div class="meta">
+                  <div class="item">Price: <i class="green dollar icon"></i></div>
+                  <div class="item">MTWRF | 10:00am - 2:00pm</div>
+                </div>
+                <div style="margin-top: 5px">
+                  <a class="ui blue tag small label">Sweet</a>
+                </div>
+              </div>
+              <div class="left aligned content">
+                <i class="star icon"></i>
+                42 Reviews
+                <span class="right floated">
       <i class="heart outline like icon"></i>
       42 Favorites
     </span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
 
   {{/if}}
 
