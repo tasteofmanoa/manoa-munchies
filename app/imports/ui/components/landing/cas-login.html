@@ -1,9 +1,9 @@
 <template name="Cas_Login">
-  <div class="ui primary circular {{size}} button">
-      {{#if currentUser}}
-      <div class="cas-logout">Logout</div>
-      {{else}}
-      <div class="cas-login">Login</div>
-      {{/if}}
-    </div>
+  <div class="ui circular {{size}} {{color}} button">
+    {{#if currentUser}}
+    <div class="cas-logout">Logout</div>
+    {{else}}
+    <div class="cas-login">{{label}}</div>
+    {{/if}}
+  </div>
 </template>

@@ -5,14 +5,15 @@
         Navigation
         <hr>
         <div class="ui list">
-          <a class="ui text item" href="{{pathFor "Profile_Page"
+          {{#if currentUser}}
+          <a class="ui text item" href="{{pathFor "User_Home_Page"
           username=routeUserName}}">Home</a>
-          <a class="ui text item" href="{{pathFor "Profile_Page"
-          username=routeUserName}}">About Us</a>
-          <a class="ui text item" href="{{pathFor "Profile_Page"
-          username=routeUserName}}">FAQ</a>
-          <a class="ui text item" href="{{pathFor "Profile_Page"
-          username=routeUserName}}">Terms of Service</a>
+          {{else}}
+          <a class="ui text item" href="{{pathFor "Landing_Page"}}">Home</a>
+          {{/if}}
+          <a class="ui text item" href="">About Us</a>
+          <a class="ui text item" href="">FAQ</a>
+          <a class="ui text item" href="">Terms of Service</a>
         </div>
       </div>
       <div class="left aligned six wide column">

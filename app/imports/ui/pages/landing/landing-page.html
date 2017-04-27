@@ -4,8 +4,8 @@
        style="background-image:url('/images/front-page-splash.jpeg'); height: 650px; margin-bottom: 50px">
     <div class="ui grid" style="padding: 20px">
       <div class="row">
-        <div class="ui right aligned sixteen wide column">
-          {{> Cas_Login size='large'}}
+        <div class="ui right aligned sixteen wide column" style="color: white">
+          {{> Cas_Login label='Login' color='blue' size='large'}}
         </div>
       </div>
     </div>
@@ -26,7 +26,7 @@
         <div class="ui hidden divider"></div>
         <div class="text item">Get your food faster using our app.</div>
         <div class="ui hidden divider"></div>
-        <button class="ui huge button" style="color: white; background-color: #F4511E;">Start Munching!</button>
+        {{> Cas_Login label='Start Munching!' color='orange' size='huge'}}
       </div>
     </div>
   </div>
