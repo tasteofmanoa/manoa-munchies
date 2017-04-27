@@ -15,12 +15,14 @@
             <p>{{ profile.title }}</p>
           </div>
           <p></p>
+          {{#if profile.bio}}
           <div class="content">
             Bio
             <div class="meta">
               <p>{{ profile.bio }}</p>
             </div>
           </div>
+          {{/if}}
           <div class="content" style="margin-top: 2px">
             Contact/Social
             <div class="meta">
