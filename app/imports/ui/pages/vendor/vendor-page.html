@@ -1,40 +1,73 @@
 <template name="Vendor_Page">
 
   {{#if Template.subscriptionsReady}}
-  <div class="ui three column grid container">
-    <div class="ui sixteen wide column">
-      <div class="ui fluid card">
-          <div class="content">
-            <div class="ui fluid image">
-          <img src="/images/vendorpic.jpg">
+
+  <div class="ui segments container">
+    <div class="ui segment"
+         style="background-image:url('http://bloximages.newyork1.vip.townnews.com/manoanow.org/content/tncms/assets/v3/editorial/4/f1/4f11f216-48bb-11e6-84df-2768f055693b/5785d2be4e76b.image.jpg?resize=1200%2C800'); background-position: center; height: 400px;">
+      <div class="ui container">
+
+      </div>
+    </div>
+    <div class="ui horizontal segments" style="background-color:white;">
+      <div class="ui segment" style="color: #757575">
+        <div class="left floated content">
+          <div class="ui items">
+            <div class="ui list">
+              <div class="ui text item"><h1>Uahi Island Grill</h1></div>
+              <div class="meta item">
+                <div class="item">Uahi Island Grill</div>
+                <div class="item">MTWRF | 10:00am - 2:00pm</div>
+                <div class="item">Kennedy Theatre</div>
+              </div>
+              <div style="margin-top: 5px">
+                <a class="ui blue tag small label">Savory</a>
+                <a class="ui blue tag small label">Local Cuisine</a>
+              </div>
             </div>
           </div>
-        <div class="content">
-          <a class="ui centered header">Uahi Island Grill</a>
-          <div class="meta">
-            <button class="ui right floated basic icon button">
-             <i class="setting icon"></i>
-            </button>
-            <div class="item">MTWRF - Time to Time</div>
-            <div class="item">Location</div>
-          </div>
-          <div style="margin-top: 5px">
-            <a class="ui green tag small label">Tags</a>
-            <a class="ui green tag small label">Tags</a>
-          </div>
         </div>
-        <div class="content">
-          <div class="meta">
-            <p> Description</p>
+      </div>
+      <div class="ui one row one column segment">
+        <div class="ui middle aligned row">
+          <div class="ui column">
+            <div class="ui hidden divider"></div>
+            <div class="ui three small statistics">
+              <div class="statistic">
+                <div class="value" style="color: #757575">
+                  5.0 <i class="yellow star icon"></i>
+                </div>
+                <div class="label" style="color: #757575">
+                  out 5 stars
+                </div>
+              </div>
+              <div class="statistic">
+                <div class="value" style="color: #757575">
+                  1048 <i class="red heart icon"></i>
+                </div>
+                <div class="label" style="color: #757575">
+                  Favorites
+                </div>
+              </div>
+              <div class="statistic">
+                <div class="value" style="color: #757575">
+                  128
+                </div>
+                <div class="label" style="color: #757575">
+                  Reviews
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
   </div>
-  <div class="ui top aligned twelve wide column">
+  <div class="ui top aligned twelve wide column" style="margin-top: 25px">
     <div class="ui three row grid container">
       <div class="row">
-        <div class="ui horizontal divider header" style="color: #757575">Appetizers</div>
+        <div class="ui horizontal divider header" style="color: #757575; margin-bottom: 25px">Appetizers</div>
         <div class="ui three cards">
           <div class="ui card">
             <div class="ui fluid image">
@@ -127,7 +160,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="ui horizontal divider header" style="color: #757575">Entrees</div>
+        <div class="ui horizontal divider header" style="color: #757575; margin-bottom: 25px">Entrees</div>
         <div class="ui three cards">
           <div class="ui card">
             <div class="ui fluid image">
@@ -222,7 +255,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="ui horizontal divider header" style="color: #757575">Desserts</div>
+        <div class="ui horizontal divider header" style="color: #757575; margin-bottom: 25px">Desserts</div>
         <div class="ui three cards">
           <div class="ui card">
             <div class="ui fluid image">
@@ -318,6 +351,7 @@
       </div>
     </div>
   </div>
+
   {{/if}}
 
 
