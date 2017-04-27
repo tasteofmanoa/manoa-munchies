@@ -92,6 +92,14 @@ userRoutes.route('/vendor', {
   },
 });
 
+export const vendorProfilePageRouteName = 'Vendor_Page';
+userRoutes.route('/vendor-profile', {
+  name: vendorProfilePageRouteName,
+  action() {
+    BlazeLayout.render('User_Layout', { main: vendorProfilePageRouteName });
+  },
+});
+
 export const homePageRouteName = 'User_Home_Page';
 userRoutes.route('/home', {
   name: homePageRouteName,
