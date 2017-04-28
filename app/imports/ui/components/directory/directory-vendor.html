@@ -1,0 +1,37 @@
+<template name="Directory_Vendor">
+
+  <div class="ui special card">
+    <div class="ui dimmable image">
+      <div class="ui dimmer">
+        <div class="ui content">
+          <div class="center">
+            <div class="ui inverted red massive icon button"><i class="heart icon"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="ui top right ribbon green label"> {{ vendor.rating }} </div>
+      <img src="{{ vendor.picture }}">
+    </div>
+    <div class="content">
+      <a class="header">{{ vendor.name }}</a>
+      <div class="meta">
+        <div class="item">{{ vendor.description }}</div>
+        <div class="item">MTWRF | 10:00am - 2:00pm</div>
+        <div class="item">{{ vendor.location }} </div>
+      </div>
+      <div style="margin-top: 5px">
+        {{#each taste in vendor.tastes }}
+        <a class="ui blue tag small label">{{taste}}</a>
+        {{/each}}
+      </div>
+    </div>
+    <div class="content">
+      <i class="star icon"></i>
+      {{ vendor.reviews }} Reviews
+      <span class="right floated">
+      <a><i class="heart outline like icon"></i></a>
+      {{ vendor.favorites }} Favorites
+    </span>
+    </div>
+  </div>
+</template>

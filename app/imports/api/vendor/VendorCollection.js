@@ -2,6 +2,7 @@ import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 import BaseCollection from '/imports/api/base/BaseCollection';
 import { Tastes } from '/imports/api/taste/TasteCollection';
 import { Munchies } from '/imports/api/munchie/MunchieCollection';
+import { Profiles } from '/imports/api/profile/ProfileCollection';
 import { check } from 'meteor/check';
 import { Meteor } from 'meteor/meteor';
 
@@ -18,7 +19,6 @@ class VendorCollection extends BaseCollection {
    */
   constructor() {
     super('Vendor', new SimpleSchema({
-      vusername: { type: String},
       name: { type: String, optional: true },
       description: { type: String, optional: true },
       available: { type: [Object], optional: true },
@@ -63,10 +63,9 @@ class VendorCollection extends BaseCollection {
    * if one or more tastes are not defined, or if facbeook and instagram are not URLs.
    * @returns The newly created docID.
    */
-  define({ vusername = '', name = '', description = '', available, munchies, tastes, location = '', rating = 0, favorites = 0, picture = '', reviews = 0}) {
+  define({ name = '', description = '', available, munchies, tastes, location = '', rating = 0, favorites = 0, picture = '', reviews = 0}) {
     // make sure required fields are OK.
     const checkPattern = {
-      vusername: String,
       name: String,
       description: String,
       location: String,
@@ -75,16 +74,74 @@ class VendorCollection extends BaseCollection {
       picture: String,
       reviews: Number
     };
-    check({ vusername, name, description, location, rating, favorites, picture, reviews }, checkPattern);
+    check({ name, description, location, rating, favorites, picture, reviews }, checkPattern);
 
-    if (this.find({ vusername }).count() > 0) {
-      throw new Meteor.Error(`${vusername} is previously defined in another Vendor`);
+    if (this.find({ name }).count() > 0) {
+      throw new Meteor.Error(`${name} is previously defined in another Vendor`);
     }
 
     // Throw an error if any of the passed Taste names are not defined.
     Tastes.assertNames(tastes);
-    Munchies.assertNames(munchies);
-    return this._collection.insert({  vusername, name, description, available, munchies, tastes, location, rating, favorites, picture, reviews });
+    return this._collection.insert({ name, description, available, munchies, tastes, location, rating, favorites, picture, reviews });
+  }
+  /**
+   * Returns the Vendor name corresponding to the passed Vendor docID.
+   * @param vendorID A vendor docID.
+   * @returns { String } An taste name.
+   * @throws { Meteor.Error} If the taste docID cannot be found.
+   */
+  findName(vendorID) {
+    this.assertDefined(vendorID);
+    return this.findDoc(vendorID).name;
+  }
+
+  /**
+   * Returns a list of Vendor names corresponding to the passed list of Vendor docIDs.
+   * @param vendorIDs A list of Vendor docIDs.
+   * @returns { Array }
+   * @throws { Meteor.Error} If any of the instanceIDs cannot be found.
+   */
+  findNames(vendorIDs) {
+    return vendorIDs.map(tasteID => this.findName(tasteID));
+  }
+
+  /**
+   * Throws an error if the passed name is not a defined munchie name.
+   * @param name The name of a munchie.
+   */
+  assertName(name) {
+    this.findDoc(name);
+  }
+
+  /**
+   * Throws an error if the passed list of names are not all Munchie names.
+   * @param names An array of (hopefully) Munchie names.
+   */
+  assertNames(names) {
+    _.each(names, name => this.assertName(name));
+  }
+
+
+
+  /**
+   * Returns the docID associated with the passed Vendor name, or throws an error if it cannot be found.
+   * @param { String } name A vendor name.
+   * @returns { String } The docID associated with the name.
+   * @throws { Meteor.Error } If name is not associated with an Vendor.
+   */
+  findID(name) {
+    return (this.findDoc(name)._id);
+  }
+
+  /**
+   * Returns the docIDs associated with the array of Taste names, or throws an error if any name cannot be found.
+   * If nothing is passed, then an empty array is returned.
+   * @param { String[] } names An array of taste names.
+   * @returns { String[] } The docIDs associated with the names.
+   * @throws { Meteor.Error } If any instance is not an Taste name.
+   */
+  findIDs(names) {
+    return (names) ? names.map((instance) => this.findID(instance)) : [];
   }
 
   /**
@@ -94,7 +151,6 @@ class VendorCollection extends BaseCollection {
    */
   dumpOne(docID) {
     const doc = this.findDoc(docID);
-    const vusername = doc.vusername;
     const name = doc.name;
     const description = doc.description;
     const available = doc.available;
@@ -105,7 +161,7 @@ class VendorCollection extends BaseCollection {
     const favorites = doc.favorites;
     const picture = doc.picture;
     const reviews = doc.reviews;
-    return { vusername, name, description, available, munchies, tastes, location, rating, favorites, picture, reviews };
+    return { name, description, available, munchies, tastes, location, rating, favorites, picture, reviews };
   }
 }
 

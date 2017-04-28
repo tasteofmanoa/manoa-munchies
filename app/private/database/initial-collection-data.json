@@ -438,7 +438,6 @@
       "name": "VendorCollection",
       "contents": [
         {
-          "vusername": "dspot",
           "name": "Da Spot",
           "description": "Honestly, I only come here for the smoothies.",
           "available": [
@@ -481,6 +480,48 @@
           "rating": 5.0,
           "favorites": 420,
           "picture": "/images/da-Spot.png",
+          "reviews": 128
+        },
+        {
+          "name": "Serg's Mexican Kitchen",
+          "description": "Super expensive now compared to other places to be honest.",
+          "available": [
+            {
+              "day": 1,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 2,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 3,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 4,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 5,
+              "start": "1000",
+              "end": "1400"
+            }
+          ],
+          "munchies":[
+            "Serg's Famous Flauta"
+          ],
+          "tastes": [
+           "Mexican"
+          ],
+          "location": "Krauss Hall",
+          "rating": 4.8,
+          "favorites": 360,
+          "picture": "/images/serg-mex-kitchen.jpg",
           "reviews": 128
         }
       ]
