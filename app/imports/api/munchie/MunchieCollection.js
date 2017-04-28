@@ -35,10 +35,10 @@ class MunchieCollection extends BaseCollection {
       },
       tastes: { type: [String], optional: true },
       location: { type: String, optional: true },
-      rating: { type: Number, optional: true, min: 1, max: 5 },
+      rating: { type: Number, decimal: true, optional: true, min: 1.0, max: 5.0 },
       favorites: { type: Number, optional: true },
       picture: { type: SimpleSchema.RegEx.Url, optional: true },
-      reviews: { type: [Object], optional: true}
+      reviews: { type: Number, optional: true}
     }));
   }
 
@@ -61,7 +61,7 @@ class MunchieCollection extends BaseCollection {
    * @returns The newly created docID.
    */
 
-  define({ name = '', vendor = '', description = '', available, tastes, location = '', rating = -1, favorites = -1, picture = '', reviews}) {
+  define({ name = '', vendor = '', description = '', available, tastes, location = '', rating = 0, favorites = 0, picture = '', reviews = 0}) {
     // make sure required fields are OK.
     const checkPattern = {
       name: String,
@@ -70,9 +70,10 @@ class MunchieCollection extends BaseCollection {
       location: String,
       rating: Number,
       favorites: Number,
-      picture: String
+      picture: String,
+      reviews: Number
     };
-    check({ name, vendor, description, location, rating, favorites, picture }, checkPattern);
+    check({ name, vendor, description, location, rating, favorites, picture, reviews }, checkPattern);
 
     if (this.find({ name, vendor }).count() > 0) {
       throw new Meteor.Error(`${name} is previously defined in another Munchie of the same ${vendor}`);
