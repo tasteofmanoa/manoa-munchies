@@ -433,6 +433,57 @@
           "picture": "/images/default-profile-picture.jpg"
         }
       ]
+    },
+    {
+      "name": "VendorCollection",
+      "contents": [
+        {
+          "vusername": "dspot",
+          "name": "Da Spot",
+          "description": "Honestly, I only come here for the smoothies.",
+          "available": [
+            {
+              "day": 1,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 2,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 3,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 4,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 5,
+              "start": "1000",
+              "end": "1400"
+            }
+          ],
+          "munchies":[
+            "Aloha Berry Smoothie"
+          ],
+          "tastes": [
+            "Fruit",
+            "Smoothies",
+            "Vegan",
+            "Vegetarian"
+          ],
+          "location": "Sustainability Courtyard",
+          "rating": 5.0,
+          "favorites": 420,
+          "picture": "/images/da-Spot.png",
+          "reviews": 128
+        }
+      ]
     }
   ]
 }
