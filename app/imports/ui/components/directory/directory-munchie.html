@@ -1,0 +1,37 @@
+<template name="Directory_Munchie">
+
+  <div class="ui special card">
+    <div class="ui dimmable image">
+      <div class="ui dimmer">
+        <div class="ui content">
+          <div class="center">
+            <div class="ui inverted red massive icon button"><i class="heart icon"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="ui top right ribbon green label"> {{ munchie.rating }} </div>
+      <img src="{{ munchie.picture }}">
+    </div>
+    <div class="content">
+      <a class="header">{{ munchie.name }}</a>
+      <div class="meta">
+        <div class="item">{{ munchie.vendor }}</div>
+        <div class="item">MTWRF | 10:00am - 2:00pm</div>
+        <div class="item">{{ munchie.location }} </div>
+      </div>
+      <div style="margin-top: 5px">
+        {{#each taste in munchie.tastes }}
+        <a class="ui blue tag small label">{{taste}}</a>
+        {{/each}}
+      </div>
+    </div>
+    <div class="content">
+      <i class="star icon"></i>
+      {{ munchie.reviews }} Reviews
+      <span class="right floated">
+      <a><i class="heart outline like icon"></i></a>
+      {{ munchie.favorites }} Favorites
+    </span>
+    </div>
+  </div>
+</template>

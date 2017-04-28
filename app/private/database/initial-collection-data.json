@@ -45,6 +45,10 @@
           "description": "Get in that fiber/vitamin C"
         },
         {
+          "name": "Indian",
+          "description": "Feeling some curry today"
+        },
+        {
           "name": "Junk Food",
           "description": "Long Day? Feels Bad."
         },
@@ -62,7 +66,11 @@
         },
         {
           "name": "Pizza",
-          "description": "Toppings on sauce on bread"
+          "description": "Toppings on sauce on  bread"
+        },
+        {
+          "name": "Ramen",
+          "description": "That college student fuel"
         },
         {
           "name": "Savory",
@@ -144,8 +152,92 @@
             "Comfort Food"
           ],
           "location": "Sustainability Courtyard",
-          "rating": 5,
-          "picture": "images/da-spot-smoothie.jpg"
+          "rating": 5.0,
+          "favorites": 284,
+          "picture": "/images/da-spot-smoothie.jpg",
+          "reviews": 79
+        },
+        {
+          "name": "Beefy Spicy Ramen",
+          "vendor": "Kamitoku Ramen Lunch Wagon",
+          "description": "Spicy",
+          "available": [
+            {
+              "day": 1,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 2,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 3,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 4,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 5,
+              "start": "1000",
+              "end": "1400"
+            }
+          ],
+          "tastes": [
+            "Ramen",
+            "Spicy"
+          ],
+          "location": "Center of Korean Studies",
+          "rating": 4.3,
+          "favorites": 167,
+          "picture": "/images/beefy-spicy-ramen.jpg",
+          "reviews": 58
+        },
+        {
+          "name": "Chicken Curry with Chana Masala",
+          "vendor": "India Café Curry Express",
+          "description": "Indian",
+          "available": [
+            {
+              "day": 1,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 2,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 3,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 4,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 5,
+              "start": "1000",
+              "end": "1400"
+            }
+          ],
+          "tastes": [
+            "Indian",
+            "Spicy"
+          ],
+          "location": "Paradise Palms",
+          "rating": 4.5,
+          "favorites": 88,
+          "picture": "/images/india-cafe-curry.jpg",
+          "reviews": 41
         },
         {
           "name": "Furikake Chicken Salad",
@@ -184,8 +276,10 @@
             "Savory"
           ],
           "location": "Kennedy Theatre",
-          "rating": 5,
-          "picture": "images/uahi-island-grill.jpg"
+          "rating": 4.0,
+          "favorites": 28,
+          "picture": "/images/uahi-island-grill.jpg",
+          "reviews": 12
         },
         {
           "name": "Nutella and Banana Crepe",
@@ -223,8 +317,51 @@
             "French"
           ],
           "location": "UH Law Library",
-          "rating": 5,
-          "picture": "images/crepe-cafe.jpg"
+          "rating": 5.0,
+          "favorites": 152,
+          "picture": "/images/crepe-cafe.jpg",
+          "reviews": 26
+        },
+        {
+          "name": "Serg's Famous Flauta",
+          "vendor": "Serg's Mexican Kitchen",
+          "description": "Shredded Beef, Chicken or Pork Carnitas",
+          "available": [
+            {
+              "day": 1,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 2,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 3,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 4,
+              "start": "1000",
+              "end": "1400"
+            },
+            {
+              "day": 5,
+              "start": "1000",
+              "end": "1400"
+            }
+          ],
+          "tastes": [
+            "Mexican",
+            "Savory"
+          ],
+          "location": "Kraus Hall",
+          "rating": 4.9,
+          "favorites": 54,
+          "picture": "/images/serg-kitchen-flauta.jpg",
+          "reviews": 42
         }
       ]
     },
