@@ -17,4 +17,4 @@ import '/imports/api/base';
 import '/imports/api/profile';
 import '/imports/api/taste';
 import '/imports/api/munchie';
-import '/imports/api/available';
+import '/imports/api/vendor';
