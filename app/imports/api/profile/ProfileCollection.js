@@ -65,8 +65,8 @@ class ProfileCollection extends BaseCollection {
     }
 
     // Throw an error if any of the passed Taste names are not defined.
-    Tastes.assertNames(tastes);
     Munchies.assertNames(favorites);
+    Tastes.assertNames(tastes);
     return this._collection.insert({ firstName, lastName, username, bio, tastes, favorites, reviews, picture, title,
       facebook, instagram });
   }
