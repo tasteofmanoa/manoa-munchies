@@ -1,7 +1,14 @@
 <template name="Directory_Munchie">
 
-  <div class="ui card">
-    <div class="ui fluid image">
+  <div class="ui special card">
+    <div class="ui dimmable image">
+      <div class="ui dimmer">
+        <div class="ui content">
+          <div class="center">
+            <div class="ui inverted red massive icon button"><i class="heart icon"></i></div>
+          </div>
+        </div>
+      </div>
       <div class="ui top right ribbon green label"> {{ munchie.rating }} </div>
       <img src="{{ munchie.picture }}">
     </div>
