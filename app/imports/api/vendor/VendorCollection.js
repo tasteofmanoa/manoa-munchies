@@ -2,7 +2,6 @@ import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 import BaseCollection from '/imports/api/base/BaseCollection';
 import { Tastes } from '/imports/api/taste/TasteCollection';
 import { Munchies } from '/imports/api/munchie/MunchieCollection';
-import { Profiles } from '/imports/api/profile/ProfileCollection';
 import { check } from 'meteor/check';
 import { Meteor } from 'meteor/meteor';
 
@@ -87,7 +86,7 @@ class VendorCollection extends BaseCollection {
   /**
    * Returns the Vendor name corresponding to the passed Vendor docID.
    * @param vendorID A vendor docID.
-   * @returns { String } An taste name.
+   * @returns { String } A vendor name.
    * @throws { Meteor.Error} If the taste docID cannot be found.
    */
   findName(vendorID) {
@@ -102,7 +101,7 @@ class VendorCollection extends BaseCollection {
    * @throws { Meteor.Error} If any of the instanceIDs cannot be found.
    */
   findNames(vendorIDs) {
-    return vendorIDs.map(tasteID => this.findName(tasteID));
+    return vendorIDs.map(vendorID => this.findName(vendorID));
   }
 
   /**
