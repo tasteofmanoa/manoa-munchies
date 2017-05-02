@@ -59,11 +59,11 @@ const userRoutes = FlowRouter.group({
   triggersExit: [removeUserBodyClass],
 });
 
-export const profilePageRouteName = 'Profile_Page';
-userRoutes.route('/profile', {
-  name: profilePageRouteName,
+export const editProfilePageRouteName = 'Edit_Profile_Page';
+userRoutes.route('/edit-profile', {
+  name: editProfilePageRouteName,
   action() {
-    BlazeLayout.render('User_Layout', { main: profilePageRouteName });
+    BlazeLayout.render('User_Layout', { main: editProfilePageRouteName });
   },
 });
 
