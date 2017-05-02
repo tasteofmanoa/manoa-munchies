@@ -487,29 +487,29 @@
           "description": "Super expensive now compared to other places to be honest.",
           "available": [
             {
-              "day": 1,
-              "start": "1000",
-              "end": "1400"
+              "day": "1",
+              "start": 1000,
+              "end": 1400
             },
             {
-              "day": 2,
-              "start": "1000",
-              "end": "1400"
+              "day": "2",
+              "start": 1000,
+              "end": 1400
             },
             {
-              "day": 3,
-              "start": "1000",
-              "end": "1400"
+              "day": "3",
+              "start": 1000,
+              "end": 1400
             },
             {
-              "day": 4,
-              "start": "1000",
-              "end": "1400"
+              "day": "4",
+              "start": 1000,
+              "end": 1400
             },
             {
-              "day": 5,
-              "start": "1000",
-              "end": "1400"
+              "day": "5",
+              "start": 1000,
+              "end": 1400
             }
           ],
           "munchies":[

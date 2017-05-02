@@ -102,7 +102,7 @@ class MunchieCollection extends BaseCollection {
    * @throws { Meteor.Error} If any of the instanceIDs cannot be found.
    */
   findNames(munchieIDs) {
-    return munchieIDs.map(tasteID => this.findName(tasteID));
+    return munchieIDs.map(munchieID => this.findName(munchieID));
   }
 
   /**
