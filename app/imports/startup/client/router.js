@@ -108,11 +108,11 @@ userRoutes.route('/home', {
   },
 });
 
-export const feedPageRouteName = 'User_Feed_Page';
+export const resultsPageRouteName = 'Search_Results_Page';
 userRoutes.route('/search', {
-  name: feedPageRouteName,
+  name: resultsPageRouteName,
   action() {
-    BlazeLayout.render('User_Layout', { main: feedPageRouteName });
+    BlazeLayout.render('User_Layout', { main: resultsPageRouteName });
   },
 });
 

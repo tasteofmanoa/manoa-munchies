@@ -8,7 +8,7 @@ import { Tastes } from '/imports/api/taste/TasteCollection';
 
 const selectedTastesKey = 'selectedTastes';
 
-Template.User_Feed_Page.onCreated(function onCreated() {
+Template.Search_Results_Page.onCreated(function onCreated() {
   this.subscribe(Tastes.getPublicationName());
   this.subscribe(Munchies.getPublicationName());
   this.subscribe(Profiles.getPublicationName());
@@ -16,7 +16,7 @@ Template.User_Feed_Page.onCreated(function onCreated() {
   this.messageFlags.set(selectedTastesKey, undefined);
 });
 
-Template.User_Feed_Page.helpers({
+Template.Search_Results_Page.helpers({
   munchies() {
     // Initialize selectedTastes to user tastes if messageFlags is undefined.
     const profile = Profiles.findDoc(FlowRouter.getParam('username'));
@@ -40,7 +40,7 @@ Template.User_Feed_Page.helpers({
   },
 });
 
-Template.User_Feed_Page.events({
+Template.Search_Results_Page.events({
   'submit .filter-data-form'(event, instance) {
     event.preventDefault();
     const selectedOptions = _.filter(event.target.Tastes.selectedOptions, (option) => option.selected);
