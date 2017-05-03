@@ -22,9 +22,10 @@ class VendorCollection extends BaseCollection {
       description: { type: String, optional: true },
       available: { type: [Object], optional: true },
       "available.$.day": {
-        type: Number,
-        min: 1,
-        max: 7
+        type: String,
+      },
+      "available.$.location": {
+        type: String,
       },
       "available.$.start": {
         type: String,
