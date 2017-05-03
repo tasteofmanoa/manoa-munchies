@@ -9,7 +9,7 @@ import { Vendors } from '/imports/api/vendor/VendorCollection';
 
 const selectedTastesKey = 'selectedTastes';
 
-Template.Vendor_Profile_Page.onCreated(function onCreated() {
+Template.Vendor_Search_Page.onCreated(function onCreated() {
   this.subscribe(Tastes.getPublicationName());
   this.subscribe(Munchies.getPublicationName());
   this.subscribe(Profiles.getPublicationName());
@@ -18,7 +18,7 @@ Template.Vendor_Profile_Page.onCreated(function onCreated() {
   this.messageFlags.set(selectedTastesKey, undefined);
 });
 
-Template.Vendor_Profile_Page.helpers({
+Template.Vendor_Search_Page.helpers({
   vendors() {
     // Initialize selectedTastes to all of them if messageFlags is undefined.
     if (!Template.instance().messageFlags.get(selectedTastesKey)) {
@@ -41,7 +41,7 @@ Template.Vendor_Profile_Page.helpers({
   },
 });
 
-Template.Vendor_Profile_Page.events({
+Template.Vendor_Search_Page.events({
   'submit .filter-data-form'(event, instance) {
     event.preventDefault();
     const selectedOptions = _.filter(event.target.Tastes.selectedOptions, (option) => option.selected);

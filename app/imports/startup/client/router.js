@@ -84,11 +84,11 @@ userRoutes.route('/filter', {
   },
 });
 
-export const vendorPageRouteName = 'Vendor_Profile_Page';
-userRoutes.route('/vendor', {
-  name: vendorPageRouteName,
+export const vendorSearchPageRouteName = 'Vendor_Search_Page';
+userRoutes.route('/vendor-search', {
+  name: vendorSearchPageRouteName,
   action() {
-    BlazeLayout.render('User_Layout', { main: vendorPageRouteName });
+    BlazeLayout.render('User_Layout', { main: vendorSearchPageRouteName });
   },
 });
 

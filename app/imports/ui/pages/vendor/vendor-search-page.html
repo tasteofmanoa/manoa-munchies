@@ -1,11 +1,11 @@
-<template name="Vendor_Profile_Page">
+<template name="Vendor_Search_Page">
   {{#if Template.subscriptionsReady}}
   <div class="ui two row two column grid container">
     <div class="top aligned row">
       <div class="ui four wide column">
       </div>
       <div class="ui twelve wide left aligned column">
-        <h1>Results</h1>
+        <h1>Vendor Results</h1>
       </div>
     </div>
     <div class="row">
@@ -49,7 +49,7 @@
         </div>
       </div>
       <div class="ui top aligned twelve wide column container">
-        {{> Vendor_Search_Directory vendors=vendors }}
+        {{> Vendor_Profile_Directory vendors=vendors }}
       </div>
     </div>
   </div>
