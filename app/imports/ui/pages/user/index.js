@@ -1,5 +1,5 @@
-import './profile-page.html';
-import './profile-page';
+import './edit-profile-page.html';
+import './edit-profile-page';
 import './user-home-page.html';
 import './user-home-page.js';
 import './search.html';

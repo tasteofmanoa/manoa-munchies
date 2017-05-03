@@ -1,11 +1,11 @@
-<template name="Search_Results_Page">
+<template name="Vendor_Search_Page">
   {{#if Template.subscriptionsReady}}
   <div class="ui two row two column grid container">
     <div class="top aligned row">
       <div class="ui four wide column">
       </div>
       <div class="ui twelve wide left aligned column">
-        <h1>Results</h1>
+        <h1>Vendor Results</h1>
       </div>
     </div>
     <div class="row">
@@ -45,14 +45,14 @@
               {{> Select_Form_Control label="Tastes" options=tastes multiple=true }}
             </div>
             <button class="ui blue button" type="submit">Filter</button>
-            <button class="ui green button" type="showall">All Munchies</button>
           </form>
         </div>
       </div>
       <div class="ui top aligned twelve wide column container">
-        {{> Search_Directory munchies=munchies }}
+        {{> Vendor_Profile_Directory vendors=vendors }}
       </div>
     </div>
   </div>
-{{/if}}
+  {{/if}}
 </template>
+
