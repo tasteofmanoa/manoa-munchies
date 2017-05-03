@@ -92,11 +92,11 @@ userRoutes.route('/vendor', {
   },
 });
 
-export const vendorProfilePageRouteName = 'Vendor_Page';
-userRoutes.route('/vendor-profile', {
-  name: vendorProfilePageRouteName,
+export const realVendorProfilePageRouteName = 'Real_Vendor_Profile_Page';
+userRoutes.route('/real-vendor-profile', {
+  name: realVendorProfilePageRouteName,
   action() {
-    BlazeLayout.render('User_Layout', { main: vendorProfilePageRouteName });
+    BlazeLayout.render('User_Layout', { main: realVendorProfilePageRouteName });
   },
 });
 
