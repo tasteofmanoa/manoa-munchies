@@ -59,11 +59,11 @@ const userRoutes = FlowRouter.group({
   triggersExit: [removeUserBodyClass],
 });
 
-export const profilePageRouteName = 'Profile_Page';
-userRoutes.route('/profile', {
-  name: profilePageRouteName,
+export const editProfilePageRouteName = 'Edit_Profile_Page';
+userRoutes.route('/edit-profile', {
+  name: editProfilePageRouteName,
   action() {
-    BlazeLayout.render('User_Layout', { main: profilePageRouteName });
+    BlazeLayout.render('User_Layout', { main: editProfilePageRouteName });
   },
 });
 
@@ -84,15 +84,15 @@ userRoutes.route('/filter', {
   },
 });
 
-export const vendorPageRouteName = 'Vendor_Profile_Page';
-userRoutes.route('/vendor', {
-  name: vendorPageRouteName,
+export const vendorSearchPageRouteName = 'Vendor_Search_Page';
+userRoutes.route('/vendor-search', {
+  name: vendorSearchPageRouteName,
   action() {
-    BlazeLayout.render('User_Layout', { main: vendorPageRouteName });
+    BlazeLayout.render('User_Layout', { main: vendorSearchPageRouteName });
   },
 });
 
-export const vendorProfilePageRouteName = 'Vendor_Page';
+export const vendorProfilePageRouteName = 'Vendor_Profile_Page';
 userRoutes.route('/vendor-profile', {
   name: vendorProfilePageRouteName,
   action() {
@@ -108,11 +108,11 @@ userRoutes.route('/home', {
   },
 });
 
-export const feedPageRouteName = 'User_Feed_Page';
+export const resultsPageRouteName = 'Search_Results_Page';
 userRoutes.route('/search', {
-  name: feedPageRouteName,
+  name: resultsPageRouteName,
   action() {
-    BlazeLayout.render('User_Layout', { main: feedPageRouteName });
+    BlazeLayout.render('User_Layout', { main: resultsPageRouteName });
   },
 });
 
