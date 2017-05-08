@@ -350,10 +350,85 @@
             "Vegetarian"
           ],
           "location": "Sustainability Courtyard",
-          "rating": 5.0,
+          "rating": 4.0,
           "favorites": 420,
           "picture": "/images/da-Spot.png",
           "reviews": 128
+        },
+        {
+          "name": "India Cafe Curry Express",
+          "description": "The only real spicy food on campus",
+          "available": [
+            {
+              "day": "1 2 3 4 5",
+              "location": "Paradise Palms",
+              "start": "1000",
+              "end": "1400"
+            }
+          ],
+          "munchies":[
+            "Chicken Curry with Chana Masala"
+          ],
+          "tastes": [
+            "Indian",
+            "Savory",
+            "Spicy"
+          ],
+          "location": "Paradise Palms",
+          "rating": 4.9,
+          "favorites": 311,
+          "picture": "/images/india-cafe-logo.png",
+          "reviews": 203
+        },
+        {
+          "name": "Kamitoku Ramen Lunch Wagon",
+          "description": "Tired of cheap ramen? Not really... but still try this place.",
+          "available": [
+            {
+              "day": "1 2 3 4 5",
+              "location": "Center of Korean Studies",
+              "start": "1000",
+              "end": "1400"
+            }
+          ],
+          "munchies":[
+            "Chicken Curry with Chana Masala"
+          ],
+          "tastes": [
+            "Ramen",
+            "Savory",
+            "Spicy"
+          ],
+          "location": "Center of Korean Studies",
+          "rating": 4.6,
+          "favorites": 286,
+          "picture": "/images/kamitoku-logo.jpg",
+          "reviews": 143
+        },
+        {
+          "name": "Le Crepe Cafe",
+          "description": "Breakfast/Lunch crepes for days.",
+          "available": [
+            {
+              "day": "1 2 3 4 5",
+              "location": "UH Law Library",
+              "start": "1000",
+              "end": "1400"
+            }
+          ],
+          "munchies":[
+            "Nutella and Banana Crepe"
+          ],
+          "tastes": [
+            "French",
+            "Savory",
+            "Sweet"
+          ],
+          "location": "UH Law Library",
+          "rating": 4.9,
+          "favorites": 495,
+          "picture": "/images/le-crepe-cafe-logo.jpg",
+          "reviews": 302
         },
         {
           "name": "Serg's Mexican Kitchen",
@@ -383,6 +458,32 @@
           "favorites": 360,
           "picture": "/images/serg-mex-kitchen.jpg",
           "reviews": 128
+        },
+        {
+          "name": "Uahi Island Grill",
+          "description": "Get local food here, we might be better than L&L.",
+          "available": [
+            {
+              "day": "1 2 3 4 5",
+              "location": "Kennedy Theatre",
+              "start": "1000",
+              "end": "1400"
+            }
+          ],
+          "munchies":[
+            "Furikake Chicken Salad"
+          ],
+          "tastes": [
+            "Comfort Food",
+            "Local Cuisine",
+            "Savory",
+            "Sweet"
+          ],
+          "location": "Kennedy Theatre",
+          "rating": 4.6,
+          "favorites": 808,
+          "picture": "/images/uahi-island-grill-logo.jpg",
+          "reviews": 365
         }
       ]
     }
