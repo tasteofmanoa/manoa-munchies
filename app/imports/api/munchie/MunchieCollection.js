@@ -2,6 +2,7 @@ import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 import BaseCollection from '/imports/api/base/BaseCollection';
 import { Tastes } from '/imports/api/taste/TasteCollection';
 import { check } from 'meteor/check';
+import { _ } from 'meteor/underscore';
 import { Meteor } from 'meteor/meteor';
 
 /** @module Munchie */
@@ -22,16 +23,16 @@ class MunchieCollection extends BaseCollection {
       vendor: { type: String, optional: true },
       description: { type: String, optional: true },
       available: { type: [Object], optional: true },
-      "available.$.day": {
+      'available.$.day': {
         type: String,
       },
-      "available.$.location": {
+      'available.$.location': {
         type: String,
       },
-      "available.$.start": {
+      'available.$.start': {
         type: String,
       },
-      "available.$.end": {
+      'available.$.end': {
         type: String,
       },
       tastes: { type: [String], optional: true },
@@ -39,7 +40,7 @@ class MunchieCollection extends BaseCollection {
       rating: { type: Number, decimal: true, optional: true, min: 1.0, max: 5.0 },
       favorites: { type: Number, optional: true },
       picture: { type: SimpleSchema.RegEx.Url, optional: true },
-      reviews: { type: Number, optional: true}
+      reviews: { type: Number, optional: true },
     }));
   }
 
@@ -62,7 +63,8 @@ class MunchieCollection extends BaseCollection {
    * @returns The newly created docID.
    */
 
-  define({ name = '', vendor = '', description = '', available, tastes, location = '', rating = 0, favorites = 0, picture = '', reviews = 0}) {
+  define({ name = '', vendor = '', description = '', available, tastes, location = '', rating = 0, favorites = 0,
+      picture = '', reviews = 0 }) {
     // make sure required fields are OK.
     const checkPattern = {
       name: String,
@@ -72,7 +74,7 @@ class MunchieCollection extends BaseCollection {
       rating: Number,
       favorites: Number,
       picture: String,
-      reviews: Number
+      reviews: Number,
     };
     check({ name, vendor, description, location, rating, favorites, picture, reviews }, checkPattern);
 
@@ -82,7 +84,8 @@ class MunchieCollection extends BaseCollection {
 
     // Throw an error if any of the passed Taste names are not defined.
     Tastes.assertNames(tastes);
-    return this._collection.insert({ name, vendor, description, available, tastes, location, rating, favorites, picture, reviews });
+    return this._collection.insert({ name, vendor, description, available, tastes, location, rating, favorites,
+      picture, reviews });
   }
 
   /**
