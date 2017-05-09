@@ -1,6 +1,5 @@
 import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
-import { FlowRouter } from 'meteor/kadira:flow-router';
 import { _ } from 'meteor/underscore';
 import { Profiles } from '/imports/api/profile/ProfileCollection';
 import { Tastes } from '/imports/api/taste/TasteCollection';
@@ -48,6 +47,3 @@ Template.Vendor_Search_Page.events({
     instance.messageFlags.set(selectedTastesKey, _.map(selectedOptions, (option) => option.value));
   },
 });
-
-
-
