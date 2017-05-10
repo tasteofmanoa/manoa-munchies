@@ -25,6 +25,7 @@ Template.Search_Results_Page.helpers({
     }
     // Find all munchies with the currently selected tastes.
     const allMunchies = Munchies.findAll();
+    console.log(allMunchies);
     const selectedTastes = Template.instance().messageFlags.get(selectedTastesKey);
     return _.filter(allMunchies, munchie => _.intersection(munchie.tastes, selectedTastes).length > 0);
   },

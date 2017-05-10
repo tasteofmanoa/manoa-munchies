@@ -16,8 +16,10 @@
       <a class="header">{{ munchie.name }}</a>
       <div class="meta">
         <div class="item">{{ munchie.vendor }}</div>
-        <div class="item">MTWRF | 10:00am - 2:00pm</div>
-        <div class="item">{{ munchie.location }} </div>
+        {{#each available in munchie.available }}
+        <div class="item">{{ available.day }} {{ available.start }} - {{ available.end }}</div>
+        <div class="item">{{ available.location }} </div>
+        {{/each}}
       </div>
       <div style="margin-top: 5px">
         {{#each taste in munchie.tastes }}
