@@ -18,3 +18,5 @@ import '/imports/api/profile';
 import '/imports/api/taste';
 import '/imports/api/munchie';
 import '/imports/api/vendor';
+import '/imports/api/review';
+

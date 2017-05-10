@@ -340,7 +340,7 @@
               "end": "1400"
             }
           ],
-          "munchies":[
+          "munchies": [
             "Aloha Berry Smoothie"
           ],
           "tastes": [
@@ -366,7 +366,7 @@
               "end": "1400"
             }
           ],
-          "munchies":[
+          "munchies": [
             "Chicken Curry with Chana Masala"
           ],
           "tastes": [
@@ -391,7 +391,7 @@
               "end": "1400"
             }
           ],
-          "munchies":[
+          "munchies": [
             "Chicken Curry with Chana Masala"
           ],
           "tastes": [
@@ -416,7 +416,7 @@
               "end": "1400"
             }
           ],
-          "munchies":[
+          "munchies": [
             "Nutella and Banana Crepe"
           ],
           "tastes": [
@@ -447,11 +447,11 @@
               "end": "1400"
             }
           ],
-          "munchies":[
+          "munchies": [
             "Serg's Famous Flauta"
           ],
           "tastes": [
-           "Mexican"
+            "Mexican"
           ],
           "location": "Krauss Hall",
           "rating": 4.8,
@@ -470,7 +470,7 @@
               "end": "1400"
             }
           ],
-          "munchies":[
+          "munchies": [
             "Furikake Chicken Salad"
           ],
           "tastes": [
@@ -484,6 +484,71 @@
           "favorites": 808,
           "picture": "/images/uahi-island-grill-logo.jpg",
           "reviews": 365
+        }
+      ]
+    },
+    {
+      "name": "ReviewCollection",
+      "contents": [
+        {
+          "name": "askywalker",
+          "comment": [
+            {
+              "Title": "Da Spot",
+              "description": "Don't get me wrong, this place is place has great smoothies. But for anything else, it is Da not. Just kidding, Da Spot has good food tailored to eating healthy. `Da Health Spot` "
+            }
+          ],
+          "rating": 3.5
+        },
+        {
+          "name": "420blzit",
+          "comment": [
+            {
+              "Title": "Uahi Island Grill",
+              "description": "This place is amazing if you like local kind food. Easily noticeable from the brightly colored bus on the side new Kennedy Theatre.  "
+            }
+          ],
+          "rating": 5.0
+        },
+        {
+          "name": "lcroft",
+          "comment": [
+            {
+              "Title": "Le Crepe Cafe",
+              "description": "These crepes are available in a sweet or savory style. The dessert makes for a great mid day sweet treat on my way home or on the way to campus. The wait can be moderately long depending on who is working, so be sure you don't have to be anywhere soon. "
+            }
+          ],
+          "rating": 4.0
+        },
+        {
+          "username": "rsanchez",
+          "comment": [
+            {
+              "Title": "Furikake Chicken Salad",
+              "description": " "
+            }
+          ],
+          "rating": 4.9
+        },
+        {
+          "username": "jdoe",
+          "comment": [
+            {
+              "Title": "Furikake Chicken Salad",
+              "description": "So much tasty chicken on top a green salad."
+            }
+          ],
+          "rating": 4.5
+        },
+        {
+          "username": "rsanchez",
+          "comment": [
+            {
+              "Title": "Aloha Berry Smoothie ",
+              "description": "Da Spot has one thing good going for it. This smoothie. Stop going to JambaJuice. "
+            }
+          ],
+          "rating": 5.0
         }
       ]
     }
