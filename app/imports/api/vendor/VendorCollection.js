@@ -6,9 +6,9 @@ import { check } from 'meteor/check';
 import { _ } from 'meteor/underscore';
 import { Meteor } from 'meteor/meteor';
 
-/** @module Vendor */
+/* @module Vendor */
 
-/**
+/*
  * Vendors provide portfolio data for a user.
  * @extends module:Base~BaseCollection
  */
@@ -89,7 +89,7 @@ class VendorCollection extends BaseCollection {
     return this._collection.insert({ name, description, available, munchies, tastes, location, rating, favorites,
       picture, reviews });
   }
-  /**
+  /*
    * Returns the Vendor name corresponding to the passed Vendor docID.
    * @param vendorID A vendor docID.
    * @returns { String } A vendor name.
