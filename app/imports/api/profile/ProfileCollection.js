@@ -36,15 +36,17 @@ class ProfileCollection extends BaseCollection {
   /**
    * Defines a new Profile.
    * @example
-   * Profiles.define({ firstName: 'Philip',
-   *                   lastName: 'Johnson',
-   *                   username: 'johnson',
-   *                   bio: 'I have been a professor of computer science at UH since 1990.',
-   *                   tastes: ['Application Development', 'Software Engineering', 'Databases'],
-   *                   title: 'Professor of Information and Computer Sciences',
-   *                   picture: 'http://philipmjohnson.org/headshot.jpg',
-   *                   facebook: 'https://facebook.com/philipmjohnson',
-   *                   instagram: 'https://instagram.com/philipmjohnson' });
+   * Profiles.define({ firstName = 'Christopher',
+   *                   lastName = 'Jaro',
+   *                   username,
+   *                   bio = 'Foo',
+   *                   tastes,
+   *                   favorites,
+   *                   reviews,
+   *                   picture = 'http://someurl.com/image.jpg',
+   *                   title = 'Developer',
+   *                   facebook = 'http://facebook.com/someusername',
+   *                   instagram = 'http://instagram.com/someusername' });
    * @param { Object } description Object with required key username.
    * Remaining keys are optional.
    * Username must be unique for all users. It should be the UH email account.
