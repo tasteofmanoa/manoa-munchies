@@ -3,7 +3,7 @@ import { FlowRouter } from 'meteor/kadira:flow-router';
 
 Template.User_Home_Page.onRendered(function onRendered() {
   this.$('.special.cards .image').dimmer({
-    on: 'hover'
+    on: 'hover',
   });
 });
 Template.User_Home_Page.helpers({

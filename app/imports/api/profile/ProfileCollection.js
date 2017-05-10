@@ -24,27 +24,29 @@ class ProfileCollection extends BaseCollection {
       lastName: { type: String, optional: true },
       bio: { type: String, optional: true },
       tastes: { type: [String], optional: true },
-      favorites: {type: [String], optional: true},
+      favorites: { type: [String], optional: true },
       title: { type: String, optional: true },
       reviews: { type: [Object], optional: true },
       picture: { type: SimpleSchema.RegEx.Url, optional: true },
       facebook: { type: SimpleSchema.RegEx.Url, optional: true },
-      instagram: { type: SimpleSchema.RegEx.Url, optional: true }
+      instagram: { type: SimpleSchema.RegEx.Url, optional: true },
     }));
   }
 
   /**
    * Defines a new Profile.
    * @example
-   * Profiles.define({ firstName: 'Philip',
-   *                   lastName: 'Johnson',
-   *                   username: 'johnson',
-   *                   bio: 'I have been a professor of computer science at UH since 1990.',
-   *                   tastes: ['Application Development', 'Software Engineering', 'Databases'],
-   *                   title: 'Professor of Information and Computer Sciences',
-   *                   picture: 'http://philipmjohnson.org/headshot.jpg',
-   *                   facebook: 'https://facebook.com/philipmjohnson',
-   *                   instagram: 'https://instagram.com/philipmjohnson' });
+   * Profiles.define({ firstName = 'Christopher',
+   *                   lastName = 'Jaro',
+   *                   username,
+   *                   bio = 'Foo',
+   *                   tastes,
+   *                   favorites,
+   *                   reviews,
+   *                   picture = 'http://someurl.com/image.jpg',
+   *                   title = 'Developer',
+   *                   facebook = 'http://facebook.com/someusername',
+   *                   instagram = 'http://instagram.com/someusername' });
    * @param { Object } description Object with required key username.
    * Remaining keys are optional.
    * Username must be unique for all users. It should be the UH email account.
@@ -83,7 +85,7 @@ class ProfileCollection extends BaseCollection {
     const username = doc.username;
     const bio = doc.bio;
     const tastes = doc.tastes;
-    const favorites = doc.favorites;
+   // const favorites = doc.favorites;
     const reviews = doc.reviews;
     const picture = doc.picture;
     const title = doc.title;

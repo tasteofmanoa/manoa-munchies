@@ -3,11 +3,12 @@ import BaseCollection from '/imports/api/base/BaseCollection';
 import { Tastes } from '/imports/api/taste/TasteCollection';
 import { Munchies } from '/imports/api/munchie/MunchieCollection';
 import { check } from 'meteor/check';
+import { _ } from 'meteor/underscore';
 import { Meteor } from 'meteor/meteor';
 
-/** @module Vendor */
+/* @module Vendor */
 
-/**
+/*
  * Vendors provide portfolio data for a user.
  * @extends module:Base~BaseCollection
  */
@@ -21,16 +22,16 @@ class VendorCollection extends BaseCollection {
       name: { type: String, optional: true },
       description: { type: String, optional: true },
       available: { type: [Object], optional: true },
-      "available.$.day": {
+      'available.$.day': {
         type: String,
       },
-      "available.$.location": {
+      'available.$.location': {
         type: String,
       },
-      "available.$.start": {
+      'available.$.start': {
         type: String,
       },
-      "available.$.end": {
+      'available.$.end': {
         type: String,
       },
       munchies: { type: [String], optional: true },
@@ -39,22 +40,23 @@ class VendorCollection extends BaseCollection {
       rating: { type: Number, decimal: true, optional: true, min: 1.0, max: 5.0 },
       favorites: { type: Number, optional: true },
       picture: { type: SimpleSchema.RegEx.Url, optional: true },
-      reviews: { type: Number, optional: true}
+      reviews: { type: Number, optional: true },
     }));
   }
 
   /**
    * Defines a new Vendor.
    * @example
-   * Vendors.define({ firstName: 'Philip',
-   *                   lastName: 'Johnson',
-   *                   username: 'johnson',
-   *                   bio: 'I have been a professor of computer science at UH since 1990.',
-   *                   tastes: ['Application Development', 'Software Engineering', 'Databases'],
-   *                   title: 'Professor of Information and Computer Sciences',
-   *                   picture: 'http://philipmjohnson.org/headshot.jpg',
-   *                   facebook: 'https://facebook.com/philipmjohnson',
-   *                   instagram: 'https://instagram.com/philipmjohnson' });
+   * Vendors.define({ name = '',
+   *                  description = '',
+   *                  available,
+   *                  munchies,
+   *                  tastes,
+   *                  location = '',
+   *                  rating = 0,
+   *                  favorites = 0,
+   *                  picture = 'http://someurl.com/image.jpg',
+   *                  reviews = 0 });
    * @param { Object } description Object with required key username.
    * Remaining keys are optional.
    * Username must be unique for all users. It should be the UH email account.
@@ -63,7 +65,8 @@ class VendorCollection extends BaseCollection {
    * if one or more tastes are not defined, or if facbeook and instagram are not URLs.
    * @returns The newly created docID.
    */
-  define({ name = '', description = '', available, munchies, tastes, location = '', rating = 0, favorites = 0, picture = '', reviews = 0}) {
+  define({ name = '', description = '', available, munchies, tastes, location = '', rating = 0, favorites = 0,
+      picture = '', reviews = 0 }) {
     // make sure required fields are OK.
     const checkPattern = {
       name: String,
@@ -72,7 +75,7 @@ class VendorCollection extends BaseCollection {
       rating: Number,
       favorites: Number,
       picture: String,
-      reviews: Number
+      reviews: Number,
     };
     check({ name, description, location, rating, favorites, picture, reviews }, checkPattern);
 
@@ -81,10 +84,12 @@ class VendorCollection extends BaseCollection {
     }
 
     // Throw an error if any of the passed Taste names are not defined.
+    Munchies.assertNames(munchies);
     Tastes.assertNames(tastes);
-    return this._collection.insert({ name, description, available, munchies, tastes, location, rating, favorites, picture, reviews });
+    return this._collection.insert({ name, description, available, munchies, tastes, location, rating, favorites,
+      picture, reviews });
   }
-  /**
+  /*
    * Returns the Vendor name corresponding to the passed Vendor docID.
    * @param vendorID A vendor docID.
    * @returns { String } A vendor name.
@@ -120,8 +125,6 @@ class VendorCollection extends BaseCollection {
   assertNames(names) {
     _.each(names, name => this.assertName(name));
   }
-
-
 
   /**
    * Returns the docID associated with the passed Vendor name, or throws an error if it cannot be found.
