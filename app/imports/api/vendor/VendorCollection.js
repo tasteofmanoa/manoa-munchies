@@ -45,17 +45,16 @@ class VendorCollection extends BaseCollection {
   }
 
   /**
-   * Defines a new Vendor.
-   * @example
-   * Vendors.define({ firstName: 'Philip',
-   *                   lastName: 'Johnson',
-   *                   username: 'johnson',
-   *                   bio: 'I have been a professor of computer science at UH since 1990.',
-   *                   tastes: ['Application Development', 'Software Engineering', 'Databases'],
-   *                   title: 'Professor of Information and Computer Sciences',
-   *                   picture: 'http://philipmjohnson.org/headshot.jpg',
-   *                   facebook: 'https://facebook.com/philipmjohnson',
-   *                   instagram: 'https://instagram.com/philipmjohnson' });
+   +   * Vendors.define({ name = '',
+ +   *                  description = '',
+ +   *                  available,
+ +   *                  munchies,
+ +   *                  tastes,
+ +   *                  location = '',
+ +   *                  rating = 0,
+ +   *                  favorites = 0,
+ +   *                  picture = 'http://someurl.com/image.jpg',
+ +   *                  reviews = 0 });
    * @param { Object } description Object with required key username.
    * Remaining keys are optional.
    * Username must be unique for all users. It should be the UH email account.

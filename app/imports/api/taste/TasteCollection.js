@@ -25,8 +25,8 @@ class TasteCollection extends BaseCollection {
   /**
    * Defines a new Taste.
    * @example
-   * Tastes.define({ name: 'Software Engineering',
-   *                    description: 'Methods for group development of large, high quality software systems' });
+   * Tastes.define({ name: 'Soul food',
+   *                    description: 'Feed your soul' });
    * @param { Object } description Object with keys name and description.
    * Name must be previously undefined. Description is optional.
    * Creates a "slug" for this name and stores it in the slug field.

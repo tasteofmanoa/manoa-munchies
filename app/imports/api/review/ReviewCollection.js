@@ -70,8 +70,8 @@ class ReviewCollection extends BaseCollection {
    * Throws an error if the passed name is not a defined munchie name.
    * @param name The name of a munchie.
    */
-  assertName() {
-    this.findDoc(Title);
+  assertName(name) {
+    this.findDoc(name);
   }
 
   /**

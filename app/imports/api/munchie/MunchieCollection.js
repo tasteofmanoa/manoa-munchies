@@ -50,11 +50,13 @@ class MunchieCollection extends BaseCollection {
    * Munchies.define({ name: 'Orange Chicken',
                        vendor: 'Panda Express',
                        description: 'Sweet and savory citrus chicken goodness',
-                       available: ,
+                       available:,
                        tastes: { type: [String], optional: true },
                        location: { type: String, optional: true },
-                       picture: { type: SimpleSchema.RegEx.Url, optional: true }
-   * @param { Object } description Object with required key username.
+   *                      rating: 0,
+   *                      favorites : 0,
+   *                      picture: 'http://someurl.com/image.jpg',
+   *                      review:0;   * @param { Object } description Object with required key username.
    * Remaining keys are optional.
    * Username must be unique for all users. It should be the UH email account.
    * Tastes is an array of defined tastes names.
