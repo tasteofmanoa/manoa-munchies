@@ -7,6 +7,7 @@ import { Profiles } from '/imports/api/profile/ProfileCollection';
 import { Tastes } from '/imports/api/taste/TasteCollection';
 
 const selectedTastesKey = 'selectedTastes';
+const currTime = moment();
 
 Template.Search_Results_Page.onCreated(function onCreated() {
   this.subscribe(Tastes.getPublicationName());
@@ -25,7 +26,6 @@ Template.Search_Results_Page.helpers({
     }
     // Find all munchies with the currently selected tastes.
     const allMunchies = Munchies.findAll();
-    console.log(allMunchies);
     const selectedTastes = Template.instance().messageFlags.get(selectedTastesKey);
     return _.filter(allMunchies, munchie => _.intersection(munchie.tastes, selectedTastes).length > 0);
   },
